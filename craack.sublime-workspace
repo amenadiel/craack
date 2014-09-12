@@ -1,0 +1,715 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"filt",
+				"filterJson"
+			],
+			[
+				"defa",
+				"defaultlat"
+			],
+			[
+				"fill",
+				"fillcolor"
+			],
+			[
+				"at",
+				"attributes"
+			],
+			[
+				"insta",
+				"instaGIS"
+			],
+			[
+				"fet",
+				"fetchAll"
+			],
+			[
+				"id",
+				"id_tabla"
+			],
+			[
+				"Da",
+				"DataSet"
+			],
+			[
+				"acc",
+				"accordion_body"
+			],
+			[
+				"co",
+				"collapsed"
+			],
+			[
+				"icon",
+				"iconclass"
+			],
+			[
+				"de",
+				"deltay"
+			],
+			[
+				"tsv",
+				"tsvfile"
+			],
+			[
+				"pro",
+				"projection"
+			],
+			[
+				"Def",
+				"DeferredGetCountyInfo"
+			],
+			[
+				"Co",
+				"CountiesST"
+			],
+			[
+				"map",
+				"mapCollapsible"
+			],
+			[
+				"over",
+				"overlayKmlUrl"
+			],
+			[
+				"cu",
+				"current_layers"
+			],
+			[
+				"inse",
+				"insertAt"
+			],
+			[
+				"sting",
+				"stringtosign"
+			],
+			[
+				"da",
+				"dataarray"
+			],
+			[
+				"requ",
+				"request_client"
+			],
+			[
+				"images",
+				"imagenesatachadas"
+			],
+			[
+				"func_",
+				"func_get_args"
+			],
+			[
+				"func",
+				"func_get_args"
+			],
+			[
+				"L",
+				"LaDB"
+			],
+			[
+				"Re",
+				"RefrescoCliente"
+			],
+			[
+				"base",
+				"base64_encode"
+			],
+			[
+				"excel",
+				"excelOutput"
+			],
+			[
+				"bar",
+				"bar_history"
+			],
+			[
+				"rps_",
+				"rps_tournament_winner"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"f",
+				"Format Code"
+			],
+			[
+				"fo",
+				"Format Code"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"P",
+				"Package Control: Remove Package"
+			],
+			[
+				"p",
+				"Package Control: Remove Package"
+			],
+			[
+				"ss",
+				"Set Syntax: SQL"
+			],
+			[
+				"set syntax ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/amena/git/www.craack.com"
+	],
+	"file_history":
+	[
+		"/home/amena/git/instagis/js/app/datasets.js",
+		"/home/amena/git/instagis/js/app/templates.js",
+		"/home/amena/git/instagis/app/routes/filters.php",
+		"/home/amena/git/instagis/js/gapp.js",
+		"/home/amena/git/instagis/app/controllers/Filters.php",
+		"/home/amena/git/instagis/app/config/middleware.php",
+		"/home/amena/git/instagis/app/controllers/Landings.php",
+		"/home/amena/git/instagis/interfaces/filter.php",
+		"/home/amena/git/instagis/index.php",
+		"/home/amena/git/instagis/views/layout/shared/header_meta.twig",
+		"/home/amena/git/instagis/js/app/models/overlay.js",
+		"/home/amena/git/instagis/js/app/collections/overlays.js",
+		"/home/amena/git/instagis/js/app/mapelements.js",
+		"/home/amena/.config/sublime-text-3/Packages/User/SFTP.errors.log",
+		"/home/amena/git/instagis/amega.html",
+		"/home/amena/git/steamscraper/steamresults.html",
+		"/home/amena/git/instagis/js/visualizations/imagecanvas.js",
+		"/home/amena/git/steamscraper/steamscraper.js",
+		"/home/amena/git/instagis/temp/d3/demos/js/extends.js",
+		"/home/amena/git/instagis/bootstrap.php",
+		"/home/amena/git/instagis/js/app/instaGIS.js",
+		"/home/amena/git/instagis/temp/d3/demos/jquery-google-maps-geocoding.html",
+		"/home/amena/git/instagis/js/visualizations/markergrid.js",
+		"/home/amena/git/instagis/js/app/viewmodels/feature.js",
+		"/home/amena/git/instagis/js/visualizations/featurecollection.js",
+		"/home/amena/git/instagis/js/common.js",
+		"/home/amena/git/instagis/js/app/websockets.js",
+		"/home/amena/git/instagis/js/lib/gmaps.js",
+		"/home/amena/git/instagis/js/app/maphelpers.js",
+		"/Dropbox/chwforo/vb_user/vbuser01.sql",
+		"/home/amena/git/instagis/js/app/maps.js",
+		"/home/amena/git/instagis/js/visualizations/d3projector.js",
+		"/home/amena/git/instagis/js/plugins/hexbin.js",
+		"/home/amena/git/instagis/views/menus/menu_embed.twig",
+		"/home/amena/git/instagis/interfaces/appcache.php",
+		"/home/amena/git/instagis/views/resources/published/layout.twig.html",
+		"/home/amena/git/instagis/css/style.css",
+		"/home/amena/git/instagis/fabfile.py",
+		"/home/amena/git/instagis/js/published/published.js",
+		"/home/amena/git/instagis/js/app/router.js",
+		"/home/amena/git/instagis/views/layout/headermaps.twig",
+		"/home/amena/git/instagis/models/Mobile_Detect.php",
+		"/home/amena/git/instagis/interfaces/uploader.php",
+		"/home/amena/git/instagis/composer.json",
+		"/home/amena/git/instagis/js/node/package.json",
+		"/home/amena/git/instagis/sftp-config.json",
+		"/home/amena/git/instagis/js/app/collections/markers.js",
+		"/home/amena/git/instagis/.gitignore",
+		"/home/amena/git/instagis/js/node/instagis.js",
+		"/home/amena/git/instagis/js/node/newrelic.js",
+		"/home/amena/git/instagis/js/node/tws.js",
+		"/home/amena/git/instagis/js/node/twn.js",
+		"/home/amena/git/instagis/js/node/rest.js",
+		"/home/amena/git/instagis/js/app/menus.js",
+		"/home/amena/git/instagis/js/app/markers.js",
+		"/home/amena/git/instagis/js/app/models/marker.js",
+		"/home/amena/git/instagis/app/controllers/Markers.php",
+		"/home/amena/git/instagis/js/lib/wicket_gmap3.js",
+		"/home/amena/git/instagis/js/app/user.js",
+		"/home/amena/git/instagis/views/menus/dropdowns.twig",
+		"/home/amena/git/instagis/temp/wicket_gmap3.js",
+		"/home/amena/git/instagis/views/controls/datasets.twig",
+		"/home/amena/git/instagis/interfaces/googledrive.php",
+		"/home/amena/git/instagis/temp/csv.csv",
+		"/home/amena/git/instagis/js/app/uploader.js",
+		"/home/amena/git/instagis/js/node/arraystream.js",
+		"/home/amena/git/instagis/temp/parsecsv.php",
+		"/home/amena/git/instagis/temp/bigarray.json",
+		"/home/amena/git/instagis/vendor/phayes/geophp/tests/input/paths_big.json",
+		"/home/amena/git/instagis/app/config/parameters.php",
+		"/home/amena/git/instagis/views/menus/organization.twig",
+		"/home/amena/git/instagis/views/menus/linkedin.twig",
+		"/home/amena/git/instagis/js/app/domelements.js",
+		"/home/amena/git/instagis/js/app/summary.js",
+		"/home/amena/git/instagis/views/menus/menu.twig",
+		"/home/amena/git/instagis/models/User.php",
+		"/home/amena/git/instagis/views/mobile/mob_infografia.twig",
+		"/home/amena/git/instagis/views/menus/top_buttons.twig",
+		"/home/amena/git/instagis/models/Helpers.php",
+		"/home/amena/git/instagis/app/controllers/Website.php",
+		"/home/amena/git/instagis/app/controllers/Admin.php",
+		"/home/amena/git/instagis/app/controllers/Users.php",
+		"/home/amena/git/instagis/interfaces/user.php",
+		"/home/amena/git/instagis/app/controllers/Attachments.php",
+		"/home/amena/.config/sublime-text-3/Packages/User/CodeFormatter.sublime-settings",
+		"/home/amena/git/instagis/d3/marker_infowindow.html",
+		"/home/amena/git/instagis/js/lib/wicket.js",
+		"/home/amena/git/instagis/js/app/models/polygon.js",
+		"/home/amena/git/instagis/js/app/features.js",
+		"/home/amena/.synergy.conf",
+		"/home/amena/git/instagis/js/app/infowindow.js",
+		"/home/amena/git/instagis/js/plugins/social_twitter.js",
+		"/home/amena/git/instagis/js/app/infographics.js",
+		"/home/amena/git/instagis/js/app/dialogs.js",
+		"/home/amena/git/instagis/js/app/queries.js",
+		"/home/amena/git/instagis/js/plugins/social_foursquare.js",
+		"/home/amena/git/instagis/js/app/geocoder.js",
+		"/home/amena/git/instagis/js/infography.js",
+		"/home/amena/git/instagis/js/mobile_infography.js",
+		"/home/amena/git/instagis/js/lib/contextmenu.js",
+		"/home/amena/git/instagis/interfaces/infography.php",
+		"/home/amena/git/instagis/js/app/botonera.js",
+		"/home/amena/git/instagis/js/app/canasta.js",
+		"/home/amena/git/instagis/views/layout/shared/body_shared.twig",
+		"/home/amena/git/instagis/views/website/home.twig",
+		"/home/amena/git/instagis/js/node/twitter_cl.js",
+		"/home/amena/git/instagis/orm/TableRepository.php",
+		"/home/amena/git/instagis/orm/DFilterRepository.php",
+		"/home/amena/git/instagis/orm/DFilter.php",
+		"/home/amena/git/instagis/orm/Table.php",
+		"/home/amena/git/instagis/orm/DMap.php",
+		"/home/amena/git/instagis/orm/FilterToMap.php",
+		"/home/amena/git/instagis/models/Upload.php",
+		"/home/amena/git/instagis/models/DataSet.php",
+		"/home/amena/git/instagis/app/controllers/Maps.php",
+		"/home/amena/git/instagis/models/Filter.php",
+		"/home/amena/git/instagis/js/visualizations/markerselector.js",
+		"/home/amena/git/instagis/vendor/autoloader.php",
+		"/home/amena/git/instagis/models/Database.php",
+		"/home/amena/git/instagis/d3/registersecure.php",
+		"/home/amena/git/instagis/js/app/representations.js",
+		"/home/amena/git/instagis/orm/FilterToMapRepository.php",
+		"/home/amena/git/instagis/orm/TableToMapRepository.php",
+		"/home/amena/git/instagis/orm/TableToMap.php",
+		"/home/amena/git/instagis/js/visualizations/shapearray.js",
+		"/home/amena/git/instagis/models/Boundary.php",
+		"/home/amena/git/instagis/js/app/boundaries.js",
+		"/usr/share/applications/google-chrome-beta.desktop"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/css",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/vendor",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/models",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/models",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/js/visualizations",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/css",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/d3",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/app",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/js/lib",
+			"/home/amena/git/instagis/js",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/instagis/geobusiness",
+			"/home/amena/git/instagis",
+			"/home/amena/git/instagis/views",
+			"/home/amena/git/Lemonchrome",
+			"src=\"js",
+			"/home/amena/git/Lemonchrome/scripts",
+			"/home/amena/git/web_wordpress_ttb",
+			"/home/amena/git/ttb",
+			"/home/amena/git/time_tracking",
+			"/home/amena/git/time_tracking/app",
+			"/home/amena/git/ttb/gdrive",
+			"/home/amena/git/ttb/gdrive/*.php",
+			"/home/amena/git/ttb/gdrive",
+			"/home/amena/git/ttb/gdrive/lib",
+			"/var/www/private/aws",
+			"/var/www/private/aws/google-api-php/src",
+			"/home/amena/git/ttb/gdrive",
+			"/home/amena/git/ttb"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"checked",
+			"selected",
+			"resizable",
+			"ressizable",
+			"displaymap",
+			"countRecords",
+			"estimate",
+			"getrecords",
+			"filtersaved",
+			"getdata",
+			"loading",
+			"savefilter",
+			"estimate",
+			"getDataExport",
+			"randomfilter",
+			"tooltip",
+			"saveFil",
+			"ImageCanvas",
+			"mouseover",
+			"openConnection",
+			";\"></",
+			"fontello-resize",
+			"jquery",
+			"icon-fullscreen icon-1x",
+			"WKT",
+			"setCenter",
+			"gmaps",
+			"botonera",
+			"gmaps",
+			"group",
+			"markerProperty",
+			"instaGIS.lgetViewPort",
+			"setqualitativeProperty",
+			"lat_user",
+			"rememberLat",
+			"setCenter(",
+			"console.group",
+			"createMap",
+			"Helpers",
+			"loadmap",
+			"map_new_point",
+			"addMarker",
+			"addmarker",
+			"createmarker",
+			"createmar",
+			"setColor",
+			"groupend",
+			"loadmap",
+			"setWktFromObject",
+			"\"",
+			"setWktFromObject",
+			"addmarker",
+			"google",
+			"csv",
+			"mongoose",
+			"findt",
+			"sign",
+			"S3",
+			"return false",
+			"set",
+			"jQuery('#orgcurrent').data('role')",
+			"orgcurrent",
+			"usorg",
+			"setactive",
+			"jQuery('#orgcurrent')",
+			"jQuery('#orgcurrent').data('currentorg')",
+			"jQuery('#linkedin').data('usermail')",
+			"jQuery('#linkedin').data('id_user')",
+			"jQuery('#linkedin')",
+			"$('#linkedin')",
+			"$(\"#linkedin\")",
+			"jQuery(\"#linkedin\")",
+			"jQuery('#linkedin').data('id_user')",
+			"jQuery('#linkedin').data('role')",
+			"jQuery('#linkedin').data('usermail')",
+			"jQuery('#linkedin').data('id_user');",
+			"jQuery('#linkedin')",
+			"jQuery('#linkedin').data",
+			"jQuery('#linkedin').data(",
+			"jQuery('#linkedin').data('currentorg",
+			"jQuery('#linkedin').data(",
+			"id_role",
+			"role",
+			"currentorg",
+			"getUserOrganization",
+			"organization_active",
+			"getOrganizationActive",
+			"organization_active",
+			"appscript",
+			"\"/js/app\"",
+			"appscript",
+			"\"/js/app\"",
+			"'appscript' => \"/js/gapp\"",
+			"'appscript' => \"",
+			"'appscript' => \"/js/app\"",
+			"'appscript' => '/js/admin',",
+			"'appscript' => \"/js/admin\",",
+			"'appscript' => '/js/",
+			"appscript",
+			"wkt",
+			"wktr",
+			"union",
+			"invert",
+			"instagis",
+			"parseInfoGral",
+			"parselink",
+			"positioncontrols",
+			"polygon_mycolor",
+			"marker_mycolor",
+			"globalmap.mouseposition",
+			"addMapStyles",
+			"Database",
+			"addMapStyles",
+			"nextgeocodingpoint",
+			"tab_publicdatasets",
+			"listPublicDatasetCategories",
+			"positionControls",
+			"atob",
+			"embed",
+			"trigger",
+			"createNewMap",
+			"panorama",
+			"Router",
+			"rememberLng",
+			"idle",
+			"instaGIS.getCookie",
+			"hideAdminPanel",
+			"ButtonsToolBar"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"rateProperty",
+			"'",
+			"jQuery('#linkedin').data('role')",
+			"instaGIS.getCurrentOrg()",
+			"instaGIS.getUserMail()",
+			"instaGIS.getUser()",
+			"instaGIS.getRole()",
+			"instaGIS.getUserMail();",
+			"instaGIS.getUser():",
+			"jQuery('#orgcurrent').data",
+			"jQuery('#orgcurrent').data('currentorg",
+			"'app'",
+			"'appscript' => 'gapp'",
+			"'appscript' => 'app'",
+			"'appscript' => 'app',",
+			"'appscript' => 'admin',",
+			"'appscript' => '/js/admin',",
+			"'appscript' => '",
+			"id_tabla",
+			"self::GetTabla($id_tabla,$this->conn);",
+			");",
+			"self::GetTabla($id_tabla,$this->conn);",
+			"fontello-users",
+			"atributo",
+			"\\t\\t",
+			"\\n\\t",
+			"$this->post_id",
+			"src=\"js",
+			"",
+			"LemonStore.indexedDB",
+			"LemonChrome",
+			"LemonChrome.indexedDB.writeLog",
+			"numero_total_inactivos",
+			"numero_total_otras",
+			"numero_total_admin",
+			"numero_total_procuradores",
+			"numero_total_asociado_junior",
+			"numero_total_asociado_senior",
+			"numero_total_socios",
+			"numero_total_profesionales",
+			"numero_total_usuariosct",
+			"numero_total_usuarios",
+			"numero_total_clientes",
+			"más",
+			"cerá",
+			"Teléfono",
+			"N°",
+			"sión",
+			"impresión",
+			"ategoría",
+			"rámite",
+			"código",
+			"Código",
+			"ción",
+			"Descripción",
+			"fondo_upload"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"project": "craack.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 272.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
