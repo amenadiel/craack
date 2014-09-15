@@ -19,7 +19,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css" />
     <link rel="stylesheet" href="/dist/css/mobile-angular-ui-base.min.css" />
     <link rel="stylesheet" href="/dist/css/mobile-angular-ui-desktop.min.css" />
     <link rel="stylesheet" href="demo.css" />
@@ -59,34 +58,20 @@
         </div>
       </div>
 
-      <div class="navbar navbar-app navbar-absolute-bottom">
-        <div class="row">
-          <div class="col-sm-3 footer-left">
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-instagram fa-navbar"></i></a>
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-facebook fa-navbar"></i></a>
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-linkedin fa-navbar"></i></a>
-          </div>
-          <div class="col-sm-6">
-            <h2>CR<b>AA</b>CK</h2>
-            <p>powered by Sailing Branding SPA</p>
-            <p>Copyright 2014, All rights reserved. 218 9th Street, 94103 San Francisco CA</p>
-          </div>
-          <div class="footer-right col-sm-3">
-            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar">ENTRENADOR</a> 
-            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-default">SIGN UP</a>
-            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-default">LOGIN</a>
-          </div>
-        </div>
-      </div>
+
 
       <!-- App Body -->
       <div class="app-body" ng-class="{loading: loading}">
+
+
         <div ng-show="loading" class="app-content-loading">
           <i class="fa fa-spinner fa-spin loading-spinner"></i>
         </div>
 
         <ng-view class="app-content" ng-hide="loading"></ng-view>
-      </div>
+
+          
+        </div>
 
     </div><!-- ~ .app -->
     <script>

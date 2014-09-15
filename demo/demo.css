@@ -121,8 +121,23 @@ body.craack {
   padding: 2% 0;
 }
 
+.search_landing input {
+  padding: 20px 10px;
+  border-radius: 1px;
+  border-bottom: 2px solid black;
+}
+
+.search_landing .btn-craack {
+  padding: 10px 10px;
+  border-radius: 1px;
+  border-bottom: 2px solid black;
+}
+
+
+
 .btn-craack {
   background-color: #E7E63E;
+  border-radius: 1px;
 }
 
 .craack .navbar-app {
@@ -133,25 +148,26 @@ body.craack {
   border-bottom:1px white;
 }
 
-.craack .navbar-app.navbar-absolute-bottom {
+.craack .navbar-bottom {
   background-color: #404041;
   color: white;
+  overflow: hidden;
 }
 
-.craack .navbar-app.navbar-absolute-bottom div {
+.craack .navbar-bottom div {
   text-align: center;
 }
 
-.craack .navbar-app.navbar-absolute-bottom h2 {
+.craack .navbar-bottom h2 {
   color:white;
   font-size:3.5em;
   font-weight:300;
 }
-.craack .navbar-app.navbar-absolute-bottom h2 b {
+.craack .navbar-bottom h2 b {
   font-weight:400;
 }
 
-.craack .navbar-app.navbar-absolute-bottom p {
+.craack .navbar-bottom p {
   color:white;
   font-size: 0.75em;
   font-style: italic;
@@ -177,15 +193,21 @@ body.craack {
 
 }
 
+.craack .list-group-item {
+  border-bottom: 0 none;
+}
+
 .craack .footer-right {
   text-align:right;
 }
 
 .craack .footer-right a {
   display: block;
-  line-height: 30px;
-  margin: 1% 0 1% 20%;
-  font-size: 0.9em;
+  color: white;
+  line-height: 15px;
+  margin: 2% 0 2% 20%;
+  font-size: 0.8em;
+  background: transparent;
   width: 60%;
 }
 
