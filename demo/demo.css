@@ -1,3 +1,222 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900,1000");
+
+body.craack {
+  font-family:"Open Sans" !important;
+  color:#404041;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family:"Open Sans" !important;
+  color:#404041;
+}
+
+.craack .app {
+  background-color: white;
+}
+
+.homelogo  {
+  background-image: url(../assets/images/craack.com_v1-06.png);
+  background-position:center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 5%;
+  /*min-height:300px;*/
+  height: 50vw;
+  font-family: "Open Sans";
+}
+
+
+.homelogo h1 {
+  font-size: 3.4em;
+  font-weight:900;
+  width:55%;
+  color:white;
+  font-family: "Open Sans";
+  line-height: 120%;
+}
+
+.homelogo h1 small {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-size: 0.45em;
+}
+
+.homescreen {
+  text-align:center;
+}
+.homescreen h2 {
+  margin:1em 0 ;
+}
+.homescreen h2 small {
+  font-size:0.5em;
+  color:black;
+}
+
+.homescreen .row.imgs {
+  margin: 2.2% 0;
+}
+
+.homescreen .row.imgs div {
+  height:301px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  
+}
+
+.homescreen .row.imgs .v1-11 {
+  background-image: url(../assets/images/craack.com_v1-11.png);
+  background-size: 98.5% 100%;  
+
+}
+.homescreen .row.imgs .v1-13 {
+  background-image: url(../assets/images/craack.com_v1-13.png);
+  background-size: 98% 100%;  
+  background-position: top right;
+}
+
+
+.homescreen .row.imgs .v1-15 {
+  background-image: url(../assets/images/craack.com_v1-15.png);
+  background-size: 98% 100%;  
+}
+.homescreen .row.imgs .v1-17 {
+  background-image: url(../assets/images/craack.com_v1-17.png); 
+  background-size: 94% 100%; 
+  background-position: top center;
+}
+.homescreen .row.imgs .v1-14 {
+  background-image: url(../assets/images/craack.com_v1-14.png); 
+  background-size: 98% 100%; 
+  background-position: top right;
+}
+
+
+.homescreen .row.imgs .v1-16 {
+  background-image: url(../assets/images/craack.com_v1-16.png);
+  background-size: 98% 100%;  
+}
+.homescreen .row.imgs .v1-12 {
+  background-image: url(../assets/images/craack.com_v1-12.png); 
+  background-size: 98.5% 100%; 
+  background-position: top right;
+}
+
+
+
+
+
+
+
+
+.search_landing {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  height:20%;
+  top: 80%;
+  overflow: hidden;
+  padding: 2% 0;
+}
+
+.btn-craack {
+  background-color: #E7E63E;
+}
+
+.craack .navbar-app {
+  background:#05BBD3;
+  color:#F0F0F0;
+  font-weight: 400;
+  border: 0 none;
+  border-bottom:1px white;
+}
+
+.craack .navbar-app.navbar-absolute-bottom {
+  background-color: #404041;
+  color: white;
+}
+
+.craack .navbar-app.navbar-absolute-bottom div {
+  text-align: center;
+}
+
+.craack .navbar-app.navbar-absolute-bottom h2 {
+  color:white;
+  font-size:3.5em;
+  font-weight:300;
+}
+.craack .navbar-app.navbar-absolute-bottom h2 b {
+  font-weight:400;
+}
+
+.craack .navbar-app.navbar-absolute-bottom p {
+  color:white;
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+.craack .footer-left {
+  text-align:left;
+  padding:3% 0 0 5%;
+}
+
+.craack .footer-left a {
+  float: left;
+  padding: 8px 10px;
+  background: white;
+  color: black;
+  margin: 5px;
+  width: 45px;
+  font-size:1.5em;
+}
+
+.craack .footer-left a i {
+  color:#404041;
+
+}
+
+.craack .footer-right {
+  text-align:right;
+}
+
+.craack .footer-right a {
+  display: block;
+  line-height: 30px;
+  margin: 1% 0 1% 20%;
+  font-size: 0.9em;
+  width: 60%;
+}
+
+.craack .footer-right a.btn-default {
+  border: 1px solid;
+  border-radius:1px;
+}
+
+
+
+.craack .navbar-app .btn, 
+.craack  .navbar-app .btn-navbar {
+  color:white;
+  height:28px;
+}
+
+.craack .navbar-brand.navbar-brand-center {
+  font-size:1.5em;
+}
+.craack .navbar-brand.navbar-brand-center b {
+  font-weight: 600;
+}
+
+.craack .navbar-app .btn i , 
+.craack  .navbar-app .btn-navbar i {
+  color:white;
+  font-size:1.6em;
+  vertical-align: middle;
+}
+
+
 #lightbulb {
   font-size: 100px;
   display: block;
