@@ -58,49 +58,51 @@ body.craack {
   margin: 2.2% 0;
 }
 
-.homescreen .row.imgs div {
-  height:301px;
+.homescreen .row div {
+  height:33vw;
   background-repeat: no-repeat;
   background-position: top left;
   
 }
 
-.homescreen .row.imgs .v1-11 {
+.homescreen .row .v1-11 {
   background-image: url(../assets/images/craack.com_v1-11.png);
-  background-size: 98.5% 100%;  
+  background-size: 98.5% 99%;  
 
 }
-.homescreen .row.imgs .v1-13 {
+.homescreen .row .v1-13 {
   background-image: url(../assets/images/craack.com_v1-13.png);
-  background-size: 98% 100%;  
+  background-size: 98% 99%;  
   background-position: top right;
 }
 
 
-.homescreen .row.imgs .v1-15 {
+.homescreen .row .v1-15 {
   background-image: url(../assets/images/craack.com_v1-15.png);
-  background-size: 98% 100%;  
+  background-size: 98% 99%;  
+  background-position: middle left;
 }
-.homescreen .row.imgs .v1-17 {
+.homescreen .row .v1-17 {
   background-image: url(../assets/images/craack.com_v1-17.png); 
-  background-size: 94% 100%; 
-  background-position: top center;
+  background-size: 94% 99%; 
+  background-position: middle center;
 }
-.homescreen .row.imgs .v1-14 {
+.homescreen .row .v1-14 {
   background-image: url(../assets/images/craack.com_v1-14.png); 
-  background-size: 98% 100%; 
-  background-position: top right;
+  background-size: 98% 99%; 
+  background-position: middle right;
 }
 
 
-.homescreen .row.imgs .v1-16 {
+.homescreen .row .v1-16 {
   background-image: url(../assets/images/craack.com_v1-16.png);
-  background-size: 98% 100%;  
+  background-size: 98% 99%;  
+  background-position: bottom left;
 }
-.homescreen .row.imgs .v1-12 {
+.homescreen .row .v1-12 {
   background-image: url(../assets/images/craack.com_v1-12.png); 
-  background-size: 98.5% 100%; 
-  background-position: top right;
+  background-size: 98.5% 99%; 
+  background-position: bottom right;
 }
 
 
