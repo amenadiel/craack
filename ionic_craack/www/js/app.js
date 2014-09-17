@@ -26,7 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	.state('app', {
 		url: "/app",
 		abstract: true,
-		templateUrl: "templates/menu.html",
+		templateUrl: "/templates/menu.html",
 		controller: 'AppCtrl'
 	})
 
@@ -35,7 +35,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		url: "/landing",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/landing.html",
+				templateUrl: "/templates/landing.html",
 				controller: 'MainController'
 			}
 		}
@@ -46,7 +46,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		url: "/search",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/search.html"
+				templateUrl: "/templates/search.html"
 			}
 		}
 	})
@@ -55,7 +55,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		url: "/browse",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/browse.html"
+				templateUrl: "/templates/browse.html"
 			}
 		}
 	})
@@ -63,7 +63,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			url: "/playlists",
 			views: {
 				'menuContent': {
-					templateUrl: "templates/playlists.html",
+					templateUrl: "/templates/playlists.html",
 					controller: 'PlaylistsCtrl'
 				}
 			}
@@ -73,7 +73,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		url: "/playlists/:playlistId",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/playlist.html",
+				templateUrl: "/templates/playlist.html",
 				controller: 'PlaylistCtrl'
 			}
 		}
