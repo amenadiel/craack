@@ -1,7 +1,7 @@
 # Created by http://gitignore.io
-
+*sublime*
 tmp
-
+*sublime*
 ### OSX ###
 .DS_Store
 .AppleDouble

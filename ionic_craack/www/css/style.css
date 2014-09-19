@@ -1,0 +1,632 @@
+/* Empty. Add your own CSS if you like */
+
+body.craack {
+  font-family:"Open Sans" !important;
+  color:#404041;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family:"Open Sans" !important;
+  color:#404041;
+}
+
+.craack .app {
+  background-color: white;
+}
+
+
+.homelogo  {
+  background-image: url(/assets/images/craack.com_v1-06.png);
+  background-position:center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 3.5vw 4vw;
+  position: relative;
+  height: 50vw;
+
+}
+
+
+.homelogo h1 {
+  font-size: 6vw;
+  font-weight:800;
+  width:55%;
+  color:white;
+  line-height: 120%;
+}
+
+.homelogo h1 small {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-size: 0.45em;
+  margin-top: 2vw;
+  display:block;
+}
+
+.homescreen {
+  text-align:center;
+}
+.homescreen h2 {
+  margin:1em 0 ;
+}
+.homescreen h2 small {
+  font-size:0.5em;
+  color:black;
+}
+
+.homescreen .row.imgs {
+  margin: 2.2% 0;
+}
+
+.homescreen #imgs div {
+  height:33vw;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.homescreen #imgs .v1-11 {
+  background-image: url(/assets/images/craack.com_v1-11.png);
+  
+
+}
+.homescreen #imgs .v1-13 {
+  background-image: url(/assets/images/craack.com_v1-13.png);
+}
+.homescreen .table-bordered {
+  border: 1px solid #fff !important;
+}
+
+.homescreen .table-bordered>tbody>tr>td {
+  border: 1px solid #fff !important;
+}
+
+.homescreen #imgs .v1-15 {
+  background-image: url(/assets/images/craack.com_v1-15.png);
+}
+.homescreen #imgs .v1-17 {
+  background-image: url(/assets/images/craack.com_v1-17.png); 
+}
+.homescreen #imgs .v1-14 {
+  background-image: url(/assets/images/craack.com_v1-14.png); 
+}
+
+
+.homescreen #imgs .v1-16 {
+  background-image: url(/assets/images/craack.com_v1-16.png);
+}
+.homescreen #imgs .v1-12 {
+  background-image: url(/assets/images/craack.com_v1-12.png); 
+}
+
+
+.craack .nav-tabs {
+  margin:20px;
+  width: 90%;
+  border-radius: 0px;
+}
+
+.craack .nav-tabs .btn {
+ 
+  border-radius: 0px;
+}
+
+.craack .tab-content {
+  margin-top: 20px;
+}
+
+.craack .btn-group>.btn-default.active, .btn-group>.btn-default.active:focus {
+  background-color:#E7E63E;
+  border-color:#E7E63E;
+
+}
+.craack .calendario .btn {
+  border:2px solid white;
+}
+
+
+
+.search_landing {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  height:20%;
+  top: 78%;
+  overflow: hidden;
+  padding: 2% 0;
+}
+
+
+
+.search_landing .item input.landing {
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 1px;
+  border:0 none;
+  border-bottom: 2px solid black;
+  width: 40%;
+  height: 47px;
+}
+
+.search_landing .btn-craack {
+  padding: 0 35px;
+  border-radius: 1px;
+  border-bottom: 2px solid black;
+}
+
+.search_landing .item {
+  background-color:transparent;
+  border-color:transparent;
+  margin: -8px 2% 5px;
+}
+
+.btn-craack {
+  background-color: #E7E63E;
+  margin: 5px 6px 5px 6px;
+  border-radius: 1px;
+  color:white;
+}
+
+
+
+.homescreen .btn-craack {
+  padding: 12px 55px 14px;
+  font-size: 1.3em;
+}
+
+.blue_landing {
+  color:white;
+  background:#04ADC3;
+  width: 100%;
+padding: 3.5vw 4vw;
+height: 50vw;
+
+margin-top: 20vw;
+text-align:left;
+position: relative;
+}
+
+.blue_landing h2 {
+  color:white;
+  width:45%;
+ font-weight:600;
+ font-size:5vw;
+ margin-left: 5vw;
+ font-family: "Open Sans";
+ position: absolute;
+}
+ 
+.blue_landing h3 {
+ color: white;
+  width: 40%;
+  font-weight: 300;
+  font-size: 2.7vw;
+  margin-left: 5vw;
+  font-family: "Open Sans";
+  position: absolute;
+  top: 23vw;
+  line-height: 130%;
+}
+.blue_landing div.cellphone {
+  position: absolute;
+  background: url(/assets/images/craack_com_v1-22.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+  bottom: 0;
+  width: 52vw;
+  height: 55vw;
+  right: 10vw;
+}
+
+.blue_landing .btn-left {
+   position: absolute;
+  height: 5vw;
+  width: 4vw;
+  color: white;
+  left: 1vw;
+  top: 24vw;
+  font-size: 7vw;
+  font-weight: 300;
+}
+
+.blue_landing .btn-right {
+  position: absolute;
+  height: 5vw;
+  width: 4vw;
+  color: white;
+  right: 1vw;
+  top: 24vw;
+  font-size: 7vw;
+  font-weight: 300;
+}
+
+.bottom_landing  {
+  text-align:left;
+}
+
+
+.bottom_landing div.ticket  {
+  padding: 10px;
+  background-image:  url(/assets/images/craack_com_v1-21.png);
+  background-repeat: no-repeat;
+  padding-left: 6vw;
+  background-position: -1% top;
+
+}
+
+
+
+.craack .navbar-app {
+  background:#05BBD3;
+  color:#F0F0F0;
+  font-weight: 400;
+  border: 0 none;
+  border-bottom:1px white;
+}
+
+.craack .navbar-bottom {
+  background-color: #404041;
+  color: white;
+  overflow: hidden;
+}
+
+.craack .navbar-bottom div {
+  text-align: center;
+}
+
+.craack .navbar-bottom h2 {
+  color:white;
+  font-size: 8vw;
+  font-weight:300;
+}
+.craack .navbar-bottom h2 b {
+  font-weight:400;
+}
+
+.craack .navbar-bottom p {
+  color:white;
+  font-size: 1.2vw;
+  font-style: italic;
+}
+
+.craack .footer-left {
+  text-align:left;
+  padding:3% 0 0 5%;
+}
+
+.craack .footer-left a {
+  float: left;
+  padding: 0.7vw 0.6vw;
+  background: white;
+  color: black;
+  margin: 5px;
+  width: 5vw;
+  font-size: 2.5vw;
+}
+
+.craack .footer-left a i {
+  color:#404041;
+
+}
+
+.craack .list-group-item {
+  border-bottom: 0 none;
+}
+
+.craack .footer-right {
+  text-align:right;
+}
+
+.craack .footer-right a {
+  display: block;
+  color: white;
+  line-height: 15px;
+  margin: 2% 0 2% 20%;
+  font-size: 1.3vw;
+  background: transparent;
+  width: 60%;
+}
+
+.craack .footer-right a.btn-default {
+  border: 1px solid;
+  border-radius:1px;
+}
+
+
+.craack .sidebar-left {
+  background: #05BBD3;
+}
+
+
+
+
+.craack  .bar.bar-craack {
+border-color: #05BBD3;
+background-color: #05BBD3;
+color: #fff;
+}
+
+.craack .bar .button.button-icon {
+  color:white;
+}
+.craack .bar .button.button-icon::before {
+  font-size:40px;
+}
+
+.craack  ion-side-menu header.bar .button.button-icon::before {
+  font-size:60px;
+  margin-left: 30px;
+}
+
+
+
+
+
+.craack ion-nav-bar .button {
+  color:white !important;
+}
+
+.craack ion-nav-bar div.buttons.right-buttons .button  {
+  font-size: 0.9em;
+  padding: 0 10px;
+  background:transparent;
+}
+.craack ion-nav-bar div.buttons.right-buttons .button.button-border {
+  border: 1px solid white;
+}
+.craack ion-nav-bar div.buttons.right-buttons .button.button-naked {
+  border: 1px solid transparent;
+}
+
+.craack h1.title {
+  color:white !important;
+  font-size: 2em;
+}
+
+.craack  .bar.bar-craack2 {
+border-color: #0797A7;
+background-color: #0797A7;
+color: #fff;
+}
+
+.craack ion-side-menu {
+  background-color: #05BBD3;
+}
+
+.craack ion-side-menu .item,
+.craack ion-side-menu .item-content {
+  background-color: transparent;
+  color:white;
+  font-size: 1.0em;
+  font-weight: 600;
+}
+
+.craack ion-side-menu .list {
+  background-color: #05BBD3;
+  left: 30px;
+  top:20px;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.craack ion-side-menu .item {
+  border-left: 0 none;
+  border-right: 0 none;
+  width: 80%;
+
+
+}
+
+
+
+
+.craack .sidebar-left .list-group {
+  background: transparent;
+  color: white;
+  padding:20px 15px;
+  padding: 3vw 2vw 1vw 9vw;
+
+  width: 55vw;
+
+}
+
+
+
+.craack .sidebar-left .list-group-item.marker {
+  background:url(/assets/images/marker.png);
+   background-repeat: no-repeat;
+   background-position: left 45%;
+}
+.craack .sidebar-left .list-group-item.users {
+  background:url(/assets/images/users.png);
+   background-repeat: no-repeat;
+   background-position: left 45%;
+}
+.craack .sidebar-left .list-group-item.ayuda {
+  background:url(/assets/images/ayuda.png);
+   background-repeat: no-repeat;
+   background-position: left 45%;
+}
+.craack .sidebar-left .list-group-item.stopwatch {
+  background:url(/assets/images/stopwatch.png);
+   background-repeat: no-repeat;
+   background-position: 2% 45%;
+}
+.craack .sidebar-left .list-group-item.alumno {
+  background:url(/assets/images/alumno.png);
+   background-repeat: no-repeat;
+   background-position: left 45%;
+}
+
+
+
+.craack .sidebar-left .times {
+  background:url(/assets/images/times.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 720px;
+}
+ 
+
+
+.craack .sidebar-left .list-group-item {
+  background: transparent;
+  color: white;
+  padding:20px 15px 20px 40px;
+  font-size: 1.5em;
+  border-bottom:1px solid #0797A7;
+
+}
+.craack .sidebar-left .list-group-item i {
+  position: relative;
+  left: -80px;
+}
+
+
+.craack .sidebar-left .scrollable-content {
+  margin-top: -19px;
+}
+
+
+.craack .sidebar-left .app-name a {
+  color: white;
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+  float: left;
+  text-indent: 7vw;
+}
+
+.craack .sidebar-left .app-name h1 {
+  background: #0797A7;
+  margin-left: -2vw;
+  text-indent:-10vw;
+}
+
+
+.craack .sidebar-left .app-name {
+  line-height: 50px;
+  font-size: 4vw;
+  text-align: center;
+  background: #0797A7;
+}
+
+.craack .navbar-app .btn, 
+.craack  .navbar-app .btn-navbar {
+  color:white;
+  height:28px;
+}
+
+.craack .navbar-brand.navbar-brand-center {
+  font-size:1.5em;
+}
+.craack .navbar-brand.navbar-brand-center b {
+  font-weight: 600;
+}
+
+.craack .navbar-app .btn i , 
+.craack  .navbar-app .btn-navbar i {
+  color:white;
+  font-size:1.6em;
+  vertical-align: middle;
+}
+
+
+#lightbulb {
+  font-size: 100px;
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.chat-user-avatar {
+  font-size: 40px;
+  background: #ccc;
+  padding: 5px 10px;
+}
+
+.feature-icon {
+  font-size: 44px;
+  padding: 0;
+  line-height: 64px;
+  width: 64px;
+  text-align: center;
+  opacity: .8;
+}
+
+.app-content-loading {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.loading-spinner {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.carousel-example-content {
+  position: absolute;
+  font-size: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: -50px;
+}
+
+
+.carousel .item {
+  color: #444;
+  background: #f4f4f4;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+
+
+.carousel {
+  padding: 20px;
+  overflow: visible;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: visible;
+
+}
+
+.carousel-inner>.item {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner>.item:first-child {
+  z-index: 1998; 
+}
+
+.carousel-inner>.item.active {
+  z-index: 2000;
+}
+
+.carousel-inner>.item.active + .item {
+  z-index: 1999;
+}
+
