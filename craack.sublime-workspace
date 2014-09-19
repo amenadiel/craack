@@ -171,7 +171,7 @@
 			"file": "demo/index.html",
 			"settings":
 			{
-				"buffer_size": 4449,
+				"buffer_size": 3266,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,7 +179,7 @@
 			"file": "demo/demo.css",
 			"settings":
 			{
-				"buffer_size": 5077,
+				"buffer_size": 5335,
 				"line_ending": "Unix"
 			}
 		},
@@ -187,7 +187,7 @@
 			"file": "demo/landing.html",
 			"settings":
 			{
-				"buffer_size": 2561,
+				"buffer_size": 3690,
 				"line_ending": "Unix"
 			}
 		}
@@ -486,6 +486,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".navbar-app.navbar-bottom",
 			"background-size: 100% 98%;",
 			"customer",
 			"invoice",
@@ -612,8 +613,7 @@
 			"trigger",
 			"createNewMap",
 			"panorama",
-			"Router",
-			"rememberLng"
+			"Router"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -621,6 +621,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			".navbar-bottom",
 			"background-size: 96% 100%;",
 			"rateProperty",
 			"'",
@@ -688,7 +689,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -761,15 +762,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4449,
+						"buffer_size": 3266,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2658,
-								2658
+								632,
+								632
 							]
 						],
 						"settings":
@@ -782,10 +783,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1006.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -794,15 +795,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5077,
+						"buffer_size": 5335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2763,
-								2763
+								3579,
+								3579
 							]
 						],
 						"settings":
@@ -815,10 +816,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2040.0,
+						"translation.y": 2805.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -827,15 +828,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2561,
+						"buffer_size": 3690,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2394,
-								2394
+								2494,
+								2494
 							]
 						],
 						"settings":
@@ -847,10 +848,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 867.0,
+						"translation.y": 1173.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
