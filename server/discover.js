@@ -6,8 +6,12 @@
 
 var app = require('./app');
 var dataSource = app.dataSources.craackmysql;
-
 console.log('Will use datasource', 'craackmysql');
+
+
+
+
+
 /*dataSource.discoverSchema('wz_tabla', {
 	owner: 'asistente'
 }, function (err, schema) {
@@ -47,7 +51,7 @@ dataSource.discoverAndBuildModels('deporte', {
 	owner: 'craack'
 }, function (err, models) {
 	//console.log(models);
-
+	models.Deporte.setup();
 	models.Deporte.find(function (err, act) {
 		if (err) {
 			console.error(err);
