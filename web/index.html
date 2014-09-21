@@ -16,16 +16,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.css?1">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/css/jasny-bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="stylesheet" href="/assets/css/select2.css">
+    <link rel="stylesheet" href="/assets/css/select2-bootstrap.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-      <script data-main="/js/app" src="/js/lib/require.js?202"></script>
+      <script data-main="/js/craack" src="/js/lib/require.js"></script>
     </head>
     <body class="craack">
+    
       <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-        <a class="navmenu-brand" href="#">CRAACK</a>
+        <h1><a class="navmenu-brand" href="#">CRAACK</a></h1>
         <ul class="nav navmenu-nav">
 
           <li><a class="list-group-item " href="#/"><i class="fa fa-home"></i>Inicio</a></li>
@@ -33,12 +37,12 @@
           <li><a class="list-group-item " data-toggle="modal" data-target="#loginuser" href="#"><i class="alumno"></i>Iniciar sesión como alumno</a></li>
           <li><a class="list-group-item " data-toggle="modal" data-target="#logintrainer" href="#"><i class="stopwatch"></i>Iniciar sesión como entrenador</a></li>
           <li><a class="list-group-item " data-toggle="modal" data-target="#inviteusers" href="#"><i class="users"></i>Invitar amigos</a></li>
-          <li><a class="list-group-item "  data-toggle="modal" data-target="#helpmodal" href="#"><i class="ayuda"></i>Ayuda</a></li>
+          <li><a class="list-group-item "  href="#/help"><i class="ayuda"></i>Ayuda</a></li>
         </ul>
       </div>
       <!-- Static navbar -->
       <div class="navbar navbar-app navbar-default navbar-fixed-top" role="navigation">
-        <div style="padding:10px;" class="btn-group pull-left">
+        <div style="padding:10px 10px 10px 0;" class="btn-group pull-left">
           <button class="btn btn-navbar sidebar-toggle btn-transparent" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" ><i class="fa fa-bars"></i> MENU</button>
         </div>
         <div class="navbar-brand navbar-brand-center" yield-to="title">
@@ -46,210 +50,13 @@
         </div>
         <div style="padding:10px;"  class="btn-group pull-right" yield-to="navbarAction">
           <button class="btn btn-navbar btn-transparent"  data-toggle="modal" data-target="#logintrainer">INICIA SESIÓN</button>
-        <button class="btn btn-navbar btn-transparent btn-border" style="border:1px solid white;">INSCRÍBETE</div>
+        <button class="btn btn-navbar btn-transparent btn-border"data-toggle="modal" data-target="#signuptrainer" style="border:1px solid white;">INSCRÍBETE</div>
       </div>
-    </div>
-    <div class="maincontainer">
-      <div class="homelogo" >
-        <h1>ENCUENTRA A TU MEJOR ENTRENADOR
-        <small>Libera tu máximo potencial</small>
-        </h1>
-        <div class="search_landing ">
-          <div class="row">
-            <div class="col-sm-1 col-xs-1"></div>
-            <input type="text" class="landing col-sm-4 col-xs-4" placeholder="Comuna donde quieres entrenar">
-            <input type="text" class="landing  col-sm-4 col-xs-4" placeholder="Deporte que quieres practicar">
-            <button class="button btn-craack col-sm-2 col-xs-2">
-            Buscar
-            </button>
-          </div>
+    
 
-        </div>
-      </div>
-      <div class=" media homescreen">
-        <h2>¡CONVIERTE EN UN CR<b>AA</b>CK, HOY!<br/>
-        <small>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado</small>
-        </h2>
-        <table class="table table-bordered" id="imgs">
-          <tr>
-            <td colspan="2"><div class="v1-11"></div></td>
-            <td><div class="v1-13"></div></td>
-          </tr>
-          <tr>
-            <td><div class="v1-15"></div></td>
-            <td><div class="v1-17"></div></td>
-            <td><div class="v1-14"></div></td>
-          </tr>
-          <tr>
-            <td><div class="v1-16"></div></td>
-            <td colspan="2"><div class="v1-12"></div></td>
-          </tr>
-        </table>
-        <h2>Un CR<b>AA</b>CK, no nace,<br/>
-        Un CR<b>AA</b>CK se hace.
-        </h2>
-        <p>
-        Bienvenido a la comunidad de amantes del deporte y bienestar. <br>
-        Porque creemos en nosotros, creemos en ti. </p>
-        <p>
-        Nuestra meta es contactarte con la persona que liberará tu máximo potencial. <br>
-        Te damos la oportunidad de lograr tus objetivos, de sentirte orgulloso de tu esfuerzo, de ser feliz.
-        </p>
-        <p>
-        Hoy estamos comenzando al igual que tú. Esta tarea no es fácil, tú lo sabes. <br>
-        Apóyanos, coméntanos, estamos para escucharte y aprender de ti.
-        </p>
-        <p>
-        Únete a la libertad de poder elegir, de estar informados y de vivir una vida sana.<br>
-        Únete a la comunidad de CRAACK
-        </p>
-        <br>
-        <button type="button" ng-model="practicar.buscar"  data-toggle="modal" data-target="#signupuser" class="btn btn-craack ">COMENZAR AHORA</button>
-        <div class="blue_landing ">
-          <a href="#" class="btn-left"><i class="fa fa-chevron-left"></i></a>
-          <h2>ENTRENA CON LOS MEJORES</h2>
-          <h3>TENEMOS A LOS MEJORES PROFESORES, EN TODAS LAS DISCIPLINAS, CERTIFICADOS PARA TI</h3>
-          <div class="cellphone"></div>
-          <a href="#" class="btn-right"><i class="fa fa-chevron-right"></i></a>
-        </div>
-        <br>
-        <br>
-        <h2>QUIERES SER ENTRENADOR?</h2>
-        <p>
-        Te ayudamos a...
-        </p>
-        <br>
-        <div class="row bottom_landing">
-          <div class="col-sm-1 col-xs-1"></div>
-          <div class="ticket col-sm-5 col-xs-5">
-            Incrementar tú número de alumnos
-          </div>
-          <div class="ticket  col-sm-6 col-xs-6">
-            Recordarle a tus alumnos la hora de entrenamiento
-          </div>
-        </div>
-        <div class="row bottom_landing">
-          <div class="col-sm-1 col-xs-1"></div>
-          <div class="ticket  col-sm-5 col-xs-5">
-            Organizar tu agenda
-          </div>
-          <div class="ticket  col-sm-6 col-xs-6">
-            Mantener tus finanzas ordenadas
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <button type="button"  class="btn btn-craack " data-toggle="modal" data-target="#logintrainer">INGRESAR COMO ENTRENADOR</button>
-        <br>
-        <br>
-        <p>Tú solo entrénalos…. Nosotros hacemos el resto.</p>
-        <br>
-        <br>
-      </div>
-      <div class="navbar-bottom">
-        <div class="row">
-          <div class="col-sm-3 col-xs-3 footer-left">
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-instagram fa-navbar"></i></a>
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-facebook fa-navbar"></i></a>
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-linkedin fa-navbar"></i></a>
-          </div>
-          <div class="col-sm-6 col-xs-6">
-            <h2>CR<b>AA</b>CK</h2>
-            <p>powered by Sailing Branding SPA</p>
-            <p>Copyright 2014, All rights reserved. 218 9th Street, 94103 San Francisco CA</p>
-          </div>
-          <div class="footer-right col-sm-3 col-xs-3 ">
-            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar">ENTRENADOR</a>
-            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-default">SIGN UP</a>
-            <a href="#" data-toggle="modal" data-target="#logintrainer" class="btn btn-default">LOGIN</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal" id="logintrainer" tabindex="-1" role="dialog" aria-labelledby="logintrainerLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="logintrainerLabel"><i class="glyphicon glyphicon-time"></i> Iniciar Sesión como Entrenador</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group" id="formlogintrainer">
-                <label for="logintrainerInputEmail1">Email</label>
-                <input type="email" class="form-control" id="logintrainerInputEmail1" placeholder="Ingresar email">
-              </div>
-              <div class="form-group">
-                <label for="logintrainerInputPassword1">Password</label>
-                <input type="password" class="form-control" id="logintrainerInputPassword1" placeholder="Ingresar Password">
-              </div>
 
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-okcraack">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="loginuser" tabindex="-1" role="dialog" aria-labelledby="loginuserLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="loginuserLabel"><i class="glyphicon glyphicon-user"></i> Iniciar Sesión como Usuario</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group" id="formloginuser">
-                <label for="loginuserInputEmail1">Email</label>
-                <input type="email" class="form-control" id="loginuserInputEmail1" placeholder="Ingresar email">
-              </div>
-              <div class="form-group">
-                <label for="loginuserInputPassword1">Password</label>
-                <input type="password" class="form-control" id="loginuserInputPassword1" placeholder="Ingresar Password">
-              </div>
 
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-okcraack">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="signupuser" tabindex="-1" role="dialog" aria-labelledby="signupuserLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="signupuserLabel"><i class="glyphicon glyphicon-user"></i> Inscribirse como Usuario</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group" id="formsignupuser">
-                <label for="signupuserInputEmail1">Email</label>
-                <input type="email" class="form-control" id="signupuserInputEmail1" placeholder="Ingresar email">
-              </div>
-              <div class="form-group">
-                <label for="signupuserInputPassword1">Password</label>
-                <input type="password" class="form-control" id="signupuserInputPassword1" placeholder="Ingresar Password">
-              </div>
-
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn  btn-okcraack">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="modals">
     <div class="modal" id="inviteusers" tabindex="-1" role="dialog" aria-labelledby="inviteusersLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -282,6 +89,32 @@
           </div>
         </div>
       </div>
+    </div>    
     </div>
+    <div id="maincontainer">
+      
+      </div>
+      <div id="footer" class="navbar-bottom">
+        <div class="row">
+          <div class="col-sm-3 col-xs-3 footer-left">
+            <a href="http://craack.com/" class="img-circle"><i class="fa fa-instagram fa-navbar"></i></a>
+            <a href="http://craack.com/" class="img-circle"><i class="fa fa-facebook fa-navbar"></i></a>
+            <a href="http://craack.com/" class="img-circle"><i class="fa fa-linkedin fa-navbar"></i></a>
+          </div>
+          <div class="col-sm-6 col-xs-6">
+            <h2>CR<b>AA</b>CK</h2>
+            <p>powered by Sailing Branding SPA</p>
+            <p>Copyright 2014, All rights reserved. 218 9th Street, 94103 San Francisco CA</p>
+          </div>
+          <div class="footer-right col-sm-3 col-xs-3 ">
+            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar">ENTRENADOR</a>
+            <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-default">SIGN UP</a>
+            <a href="#" data-toggle="modal" data-target="#logintrainer" class="btn btn-default">LOGIN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    
   </body>
 </html>

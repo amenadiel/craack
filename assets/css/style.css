@@ -1,5 +1,13 @@
 /* Empty. Add your own CSS if you like */
 
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+
+
 body.craack {
   font-family:"Open Sans" !important;
   color:#404041;
@@ -20,6 +28,18 @@ body.craack {
   margin-left: 15px;
 }
 
+.craack #maincontainer {
+  
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 45px auto -195px;
+}
+#footer {
+  height:140px;
+  position: relative;
+top: 150px;
+}
 @media (min-width: 0) {
   .navbar-toggle {
     display: block; /* force showing the toggle */
@@ -51,9 +71,7 @@ body.craack {
   border-radius:1px;
  }
 
-.craack .maincontainer {
-  margin-top: 45px;
-}
+
 
 .craack .modal-header {
   background-color:#05BBD3;
@@ -110,8 +128,13 @@ margin-left: -30%;
   display:block;
 }
 
+.margintop {
+  margin-top:100px;
+}
+
 .homescreen {
-  text-align:center;
+  
+  
 }
 .homescreen h2 {
   margin:1em 0 ;
@@ -199,7 +222,7 @@ margin-left: -30%;
   left:0;
   right:0;
   height:20%;
-  top: 82%;
+  top: 80%;
   overflow: hidden;
   padding: 2% 0 2% 2%;
 }
@@ -513,27 +536,27 @@ color: #fff;
  
 
 .craack .nav.navmenu-nav  .list-group-item.marker {
-  background:url(/images/marker.png);
+  background:url(/assets/images/marker.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
 .craack .nav.navmenu-nav  .list-group-item.users {
-  background:url(/images/users.png);
+  background:url(/assets/images/users.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
 .craack .nav.navmenu-nav  .list-group-item.ayuda {
-  background:url(/images/ayuda.png);
+  background:url(/assets/images/ayuda.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
 .craack .nav.navmenu-nav  .list-group-item.stopwatch {
-  background:url(/images/stopwatch.png);
+  background:url(/assets/images/stopwatch.png);
    background-repeat: no-repeat;
    background-position: 2% 45%;
 }
 .craack .nav.navmenu-nav .list-group-item.alumno {
-  background:url(/images/alumno.png);
+  background:url(/assets/images/alumno.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
@@ -555,37 +578,45 @@ background-repeat: no-repeat;
 }
 
 .craack .nav.navmenu-nav  .list-group-item .marker {
-  background:url(/images/marker.png);
+  background:url(/assets/images/marker.png);
   margin-left: -4px;
   margin-right: 24px;
 }
 .craack .nav.navmenu-nav  .list-group-item .users {
-  background:url(/images/users.png);
+  background:url(/assets/images/users.png);
   background-repeat: no-repeat;
 }
 .craack .nav.navmenu-nav  .list-group-item .ayuda {
-  background:url(/images/ayuda.png);
+  background:url(/assets/images/ayuda.png);
   background-repeat: no-repeat;
 }
 .craack .nav.navmenu-nav  .list-group-item .stopwatch {
-  background:url(/images/stopwatch.png);
+  background:url(/assets/images/stopwatch.png);
   background-repeat: no-repeat;
 }
 .craack .nav.navmenu-nav .list-group-item .alumno {
-  background:url(/images/alumno.png);
+  background:url(/assets/images/alumno.png);
   background-repeat: no-repeat;
 }
 
 
 .craack .sidebar-left .times {
-  background:url(/images/times.png);
+  background:url(/assets/images/times.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   left: 720px;
 }
  
+.craack .navmenu h1 {
+  background-color: #0797A7;
+  margin-top: -10px;
+  padding: 1px 0 1px 10px;
+}
 
+.craack .navmenu-brand {
+  color:white;
+}
 
 .craack .sidebar-left .list-group-item {
   background: transparent;
