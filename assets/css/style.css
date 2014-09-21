@@ -3,7 +3,7 @@
 body.craack {
   font-family:"Open Sans" !important;
   color:#404041;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -15,19 +15,83 @@ body.craack {
   background-color: white;
 }
 
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+    width: 100%
+  }
+}
+
+.craack .navmenu {
+  color:white;
+  background-color:#05BBD3;
+}
+
+ .craack .btn-transparent  {
+  background-color:transparent !important;
+ }
+
+  .craack .btn-bordered  {
+  border-radius:1px;
+ }
+
+.craack .maincontainer {
+  margin-top: 45px;
+}
+
+.craack .modal-header {
+  background-color:#05BBD3;
+  border-color:#05BBD3;
+  color: white !important;
+}
+
+.craack .modal-header  .modal-title {
+  color:white;
+}
+
+
+.craack .navbar-brand-center {
+  position: absolute;
+  text-align:center;
+  width: 60%;
+  color: white;
+  font-size: 2em !important;
+top: -4px;
+left: 50%;
+margin-left: -30%;
+}
+.craack .navbar-toggle {
+  float:left;
+}
 
 .homelogo  {
   background-image: url(/assets/images/craack.com_v1-06.png);
   background-position:center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 101%;
   padding: 3.5vw 4vw;
   position: relative;
   height: 50vw;
+  left: -1vw;
 
 }
-
 
 .homelogo h1 {
   font-size: 6vw;
@@ -135,27 +199,26 @@ body.craack {
   left:0;
   right:0;
   height:20%;
-  top: 78%;
+  top: 82%;
   overflow: hidden;
-  padding: 2% 0;
+  padding: 2% 0 2% 2%;
 }
 
 
 
-.search_landing .item input.landing {
+.search_landing  input.landing {
   padding: 10px 10px;
   margin: 5px;
   border-radius: 1px;
   border:0 none;
   border-bottom: 2px solid black;
-  width: 40%;
   height: 47px;
 }
 
 .search_landing .btn-craack {
-  padding: 0 35px;
-  border-radius: 1px;
-  border-bottom: 2px solid black;
+  padding: 10px 25px 12px;
+border-radius: 1px;
+border-bottom: 2px solid black;
 }
 
 .search_landing .item {
@@ -316,6 +379,9 @@ position: relative;
 
 .craack .list-group-item {
   border-bottom: 0 none;
+  border-right: 0 none;
+  border-left: 0 none;
+  border-radius:0;
 }
 
 .craack .footer-right {
@@ -422,10 +488,13 @@ color: #fff;
 
 }
 
+.craack .btn-okcraack {
+  background-color:#05BBD3;
+}
 
 
 
-.craack .sidebar-left .list-group {
+.craack .nav.navmenu-nav  .list-group {
   background: transparent;
   color: white;
   padding:20px 15px;
@@ -435,38 +504,81 @@ color: #fff;
 
 }
 
+.craack .nav.navmenu-nav  .list-group-item {
+  color: white;
+  background: transparent;
+  padding: 10px 10px 15px 10px;
+}
 
+ 
 
-.craack .sidebar-left .list-group-item.marker {
-  background:url(/assets/images/marker.png);
+.craack .nav.navmenu-nav  .list-group-item.marker {
+  background:url(/images/marker.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
-.craack .sidebar-left .list-group-item.users {
-  background:url(/assets/images/users.png);
+.craack .nav.navmenu-nav  .list-group-item.users {
+  background:url(/images/users.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
-.craack .sidebar-left .list-group-item.ayuda {
-  background:url(/assets/images/ayuda.png);
+.craack .nav.navmenu-nav  .list-group-item.ayuda {
+  background:url(/images/ayuda.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
-.craack .sidebar-left .list-group-item.stopwatch {
-  background:url(/assets/images/stopwatch.png);
+.craack .nav.navmenu-nav  .list-group-item.stopwatch {
+  background:url(/images/stopwatch.png);
    background-repeat: no-repeat;
    background-position: 2% 45%;
 }
-.craack .sidebar-left .list-group-item.alumno {
-  background:url(/assets/images/alumno.png);
+.craack .nav.navmenu-nav .list-group-item.alumno {
+  background:url(/images/alumno.png);
    background-repeat: no-repeat;
    background-position: left 45%;
 }
 
+.craack .nav.navmenu-nav  .list-group-item i {
+width: 20px;
+display: inline-block;
+float: left;
+height: 30px;
+background-position: top center !important;
+margin-right:20px;
+font-size: 1.5em;
+text-align: center;
+background-repeat: no-repeat;
+}
+.craack .modal {
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.craack .nav.navmenu-nav  .list-group-item .marker {
+  background:url(/images/marker.png);
+  margin-left: -4px;
+  margin-right: 24px;
+}
+.craack .nav.navmenu-nav  .list-group-item .users {
+  background:url(/images/users.png);
+  background-repeat: no-repeat;
+}
+.craack .nav.navmenu-nav  .list-group-item .ayuda {
+  background:url(/images/ayuda.png);
+  background-repeat: no-repeat;
+}
+.craack .nav.navmenu-nav  .list-group-item .stopwatch {
+  background:url(/images/stopwatch.png);
+  background-repeat: no-repeat;
+}
+.craack .nav.navmenu-nav .list-group-item .alumno {
+  background:url(/images/alumno.png);
+  background-repeat: no-repeat;
+}
 
 
 .craack .sidebar-left .times {
-  background:url(/assets/images/times.png);
+  background:url(/images/times.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
