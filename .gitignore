@@ -2,6 +2,7 @@
 *sublime*
 tmp
 *sublime*
+node_modules
 ### OSX ###
 .DS_Store
 .AppleDouble
