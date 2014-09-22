@@ -1,15 +1,15 @@
 {
-	"db": {
-		"name": "db",
-		"connector": "memory"
-	},
-	"craackmysql": {
-		"host": "mysql.instagis.com",
-		"port": 3306,
-		"database": "craack",
-		"password": "craack.,1234",
-		"name": "craackmysql",
-		"connector": "mysql",
-		"user": "craack"
-	}
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "craackmysql": {
+    "host": "mysql.instagis.com",
+    "port": 3306,
+    "database": "craack",
+    "password": "craack.,1234",
+    "name": "craackmysql",
+    "connector": "mysql",
+    "user": "craack"
+  }
 }

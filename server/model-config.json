@@ -27,5 +27,9 @@
   "deporte": {
     "dataSource": "craackmysql",
     "public": true
+  },
+  "comuna": {
+    "dataSource": "craackmysql",
+    "public": true
   }
 }

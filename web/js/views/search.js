@@ -29,12 +29,21 @@ define([
 			'<div class="tab-pane active" id="home">Buscar por deporte<br>',
 			'<div class="row selectdeporte">',
 			'<div class="col-sm-1 col-xs-1"></div>',
-			'<input id="deportes" style="width:453px" type="hidden">',
+			'<select multiple id="deportes" style="width:453px;" class="invisible" ></select>',
 			'<button class="btn btn-craack">Buscar</button>',
 			'</div>',
 
 			'</div>',
-			'<div class="tab-pane" id="profile">Buscar por comuna</div>',
+			'<div class="tab-pane" id="profile">Buscar por comuna<br>',
+
+			'<div class="row selectcomuna">',
+			'<div class="col-sm-1 col-xs-1"></div>',
+			'<select multiple id="comunas" style="width:453px" class="invisible" ></select>',
+			'<button class="btn btn-craack">Buscar</button>',
+			'</div>',
+
+			'</div>',
+
 			'<div class="tab-pane" id="messages">Buscar por amigos</div>',
 			'</div>',
 			'<br>',
@@ -52,32 +61,38 @@ define([
 			//console.log('rendering landing', jQuery(this.el), this.homelogo);
 			jQuery(this.el).html(this.homescreen);
 
-			$("#deportes").select2({
-				minimumInputLength: 2,
-				tags: [],
-				matcher: function (term, text, opt) {
-					console.log(term, text);
-					return text.toUpperCase().indexOf(term.toUpperCase()) >= 0;
-				},
-				ajax: {
-					url: '/api/deportes',
-					dataType: 'json',
-					type: "GET",
-					quietMillis: 50,
+			jQuery.ajax({
+				url: '/api/deportes',
+				type: 'GET',
+				dataType: 'json'
+			}).done(function (data) {
+				data.forEach(function (element) {
+					jQuery('#deportes').append('<option id="' + element.id + '">' + element.nombre + '</option>');
+				});
 
-					results: function (data) {
-						return {
-							results: $.map(data, function (item) {
-								return {
-									text: item.nombre,
-									slug: item.nombre,
-									id: item.id
-								}
-							})
-						};
-					}
-				}
+				$("#deportes").removeClass('invisible').select2({
+					minimumInputLength: 3,
+				});
+
+
 			});
+
+			jQuery.ajax({
+				url: '/api/comunas',
+				type: 'GET',
+				dataType: 'json'
+			}).done(function (data) {
+				data.forEach(function (element) {
+					jQuery('#comunas').append('<option id="' + element.id + '">' + element.nombre + '</option>');
+				});
+
+				$("#comunas").removeClass('invisible').select2({
+					minimumInputLength: 3,
+				});
+
+
+			});
+
 		}
 
 

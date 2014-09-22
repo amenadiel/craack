@@ -22,7 +22,7 @@ boot(app, __dirname);
 //   var path = require('path');
 //   app.use(loopback.static(path.resolve(__dirname, '../client')));
 
-app.use(loopback.static(path.join(__dirname, '../..', 'web')));
+app.use(loopback.static(path.join(__dirname, '..', 'web')));
 
 // Requests that get this far won't be handled
 // by any middleware. Convert them into a 404 error
