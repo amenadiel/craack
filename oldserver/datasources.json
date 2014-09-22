@@ -1,0 +1,21 @@
+{
+  "db": {
+    "name": "db",
+    "defaultForType": "db",
+    "connector": "memory"
+  },
+  "mail": {
+    "name": "mail",
+    "defaultForType": "mail",
+    "connector": "mail"
+  },
+  "craackmysql": {
+    "host": "mysql.instagis.com",
+    "port": 3306,
+    "database": "craack",
+    "password": "craack.,1234",
+    "name": "craackmysql",
+    "connector": "mysql",
+    "user": "craack"
+  }
+}
