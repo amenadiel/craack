@@ -259,9 +259,15 @@ border-bottom: 2px solid black;
 
 
 
+
 .homescreen .btn-craack {
   padding: 12px 55px 14px;
   font-size: 1.3em;
+}
+
+.homescreen  .selectdeporte .btn-craack {
+padding: 6px 20px 7px;
+font-size: 1em;
 }
 
 .blue_landing {

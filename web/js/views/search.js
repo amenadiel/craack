@@ -26,11 +26,12 @@ define([
 
 			'<!-- Tab panes -->',
 			'<div style="padding:0 20px; " class="tab-content">',
-			'<div class="tab-pane active" id="home">Buscar por deporte',
-
-			'<input id="deportes" type="text">',
-			'<button class="btn btn-craack">Buscar</button>'
-
+			'<div class="tab-pane active" id="home">Buscar por deporte<br>',
+			'<div class="row selectdeporte">',
+			'<div class="col-sm-1 col-xs-1"></div>',
+			'<input id="deportes" style="width:453px" type="hidden">',
+			'<button class="btn btn-craack">Buscar</button>',
+			'</div>',
 
 			'</div>',
 			'<div class="tab-pane" id="profile">Buscar por comuna</div>',
@@ -54,22 +55,22 @@ define([
 			$("#deportes").select2({
 				minimumInputLength: 2,
 				tags: [],
+				matcher: function (term, text, opt) {
+					console.log(term, text);
+					return text.toUpperCase().indexOf(term.toUpperCase()) >= 0;
+				},
 				ajax: {
-					url: URL,
+					url: '/api/deportes',
 					dataType: 'json',
 					type: "GET",
 					quietMillis: 50,
-					data: function (term) {
-						return {
-							term: term
-						};
-					},
+
 					results: function (data) {
 						return {
 							results: $.map(data, function (item) {
 								return {
-									text: item.completeName,
-									slug: item.slug,
+									text: item.nombre,
+									slug: item.nombre,
 									id: item.id
 								}
 							})
