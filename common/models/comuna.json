@@ -1,10 +1,9 @@
 {
-  "name": "comuna",
+  "name": "Comuna",
   "base": "PersistedModel",
   "properties": {
     "nombre": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   },
   "validations": [],

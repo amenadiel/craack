@@ -1,0 +1,22 @@
+{
+  "name": "Person",
+  "base": "PersistedModel",
+  "properties": {
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "DOB": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

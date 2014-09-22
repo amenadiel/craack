@@ -1,15 +1,8 @@
 {
-  "name": "deporte",
+  "name": "Deporte",
   "base": "PersistedModel",
   "properties": {
     "nombre": {
-      "type": "string",
-      "required": true
-    },
-    "icono": {
-      "type": "string"
-    },
-    "descripcion": {
       "type": "string"
     }
   },

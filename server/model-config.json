@@ -31,5 +31,17 @@
   "comuna": {
     "dataSource": "craackmysql",
     "public": true
+  },
+  "Person": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Deporte": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Comuna": {
+    "dataSource": "craackmysql",
+    "public": true
   }
 }

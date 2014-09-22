@@ -15,6 +15,7 @@ app.use(loopback.compress());
 // boot scripts mount components like REST API
 boot(app, __dirname);
 
+
 // -- Mount static files here--
 // All static middleware should be registered at the end, as all requests
 // passing the static middleware are hitting the file system
@@ -22,7 +23,7 @@ boot(app, __dirname);
 //   var path = require('path');
 //   app.use(loopback.static(path.resolve(__dirname, '../client')));
 
-app.use(loopback.static(path.join(__dirname, '..', 'web')));
+app.use(loopback.static(path.resolve(__dirname, '../web')));
 
 // Requests that get this far won't be handled
 // by any middleware. Convert them into a 404 error
