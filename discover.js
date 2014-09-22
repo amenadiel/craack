@@ -9,18 +9,42 @@ var ds = app.dataSources.craackmysql;
 console.log('Will use datasource', 'craackmysql');
 
 
-ds.discoverModelDefinitions({
+/*ds.discoverModelDefinitions({
 	views: true,
 	limit: 20
 }, function (err, models) {
 	console.log(models);
-});
+});*/
 
-ds.discoverSchema('entrenador', {
-	owner: 'STRONGLOOP'
+/*ds.discoverSchema('entrenador', {
+	owner: 'craack'
 }, function (err, models) {
-	models.Entrenador.setup();
+	if (models.Entrenador) {
+		console.log('found model Entrenador');
+		models.Entrenador.setup();
+	}
 
+});*/
+
+ds.discoverSchema('establecimiento', {
+	owner: 'craack',
+	visited: {},
+	associations: true
+}, function (err, models) {
+	if (models.Entrenador) {
+		console.log('found model establecimiento');
+		models.Entrenador.setup();
+	} else {
+		console.log('models were', JSON.stringify(models));
+	}
+	/*models.Entrenador.find(function (err, act) {
+		if (err) {
+			console.errclearor(err);
+		} else {
+			console.log(act);
+		}
+		ds.disconnect();
+	});*/
 });
 
 /*dataSource.discoverAndBuildModels('entrenador', {
@@ -38,7 +62,7 @@ ds.discoverSchema('entrenador', {
 		}
 		dataSource.disconnect();
 	});
-});
+}); 
 
 dataSource.discoverAndBuildModels('entrenador_deporte', {
 	owner: 'craack',
@@ -55,7 +79,7 @@ dataSource.discoverAndBuildModels('entrenador_deporte', {
 		}
 		dataSource.disconnect();
 	});
-});*/
+});
 
 /*dataSource.discoverSchema('wz_tabla', {
 	owner: 'asistente'

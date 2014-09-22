@@ -28,9 +28,12 @@ define([
 			'<div style="padding:0 20px; " class="tab-content">',
 			'<div class="tab-pane active" id="home">Buscar por deporte<br>',
 			'<div class="row selectdeporte">',
-			'<div class="col-sm-1 col-xs-1"></div>',
+			'<div class="col-sm-8 col-xs-8" style="text-align:right;padding-top:5px;">',
 			'<select multiple id="deportes" style="width:453px;" class="invisible" ></select>',
-			'<button class="btn btn-craack">Buscar</button>',
+			'</div>',
+			'<div class="col-sm-4 col-xs-4" style="text-align:left;">',
+			'<button class="btn btn-craack" id="buscardeporte">Buscar</button>',
+			'</div>',
 			'</div>',
 
 			'</div>',
@@ -39,7 +42,7 @@ define([
 			'<div class="row selectcomuna">',
 			'<div class="col-sm-1 col-xs-1"></div>',
 			'<select multiple id="comunas" style="width:453px" class="invisible" ></select>',
-			'<button class="btn btn-craack">Buscar</button>',
+			'<button class="btn btn-craack" id="buscarcomuna">Buscar</button>',
 			'</div>',
 
 			'</div>',
@@ -47,6 +50,9 @@ define([
 			'<div class="tab-pane" id="messages">Buscar por amigos</div>',
 			'</div>',
 			'<br>',
+			'<div id="results" style="padding:20px;margin-bottom: 100px;">',
+
+			'<div>',
 			'</div>'
 		].join(''),
 
@@ -62,7 +68,7 @@ define([
 			jQuery(this.el).html(this.homescreen);
 
 			jQuery.ajax({
-				url: '/api/deportes',
+				url: '/api/Deportes',
 				type: 'GET',
 				dataType: 'json'
 			}).done(function (data) {
@@ -78,7 +84,7 @@ define([
 			});
 
 			jQuery.ajax({
-				url: '/api/comunas',
+				url: '/api/Comunas',
 				type: 'GET',
 				dataType: 'json'
 			}).done(function (data) {
@@ -89,9 +95,42 @@ define([
 				$("#comunas").removeClass('invisible').select2({
 					minimumInputLength: 3,
 				});
-
-
 			});
+
+			jQuery(document).on('click', '#buscardeporte', function () {
+				var selectedoptions = [];
+				if (jQuery('#deportes option:selected').length === 0) {
+					alert('Elija al menos un deporte');
+				} else if (jQuery('#deportes option:selected').length === 1) {
+					jQuery('#deportes option:selected').each(function () {
+						var sportid = 'filter[where][idDeporte]=' + jQuery(this).attr('id');
+						selectedoptions.push(sportid);
+					});
+				} else {
+					jQuery('#deportes option:selected').each(function () {
+						var sportid = 'filter[where][idDeporte][inq]=' + jQuery(this).attr('id');
+						selectedoptions.push(sportid);
+					});
+				}
+
+				jQuery.ajax({
+					url: '/api/Clases?filter[include]=establecimiento&filter[include]=deporte&filter[include]=entrenador&' + selectedoptions.join('&'),
+					type: 'GET',
+					dataType: 'json'
+				}).done(function (results) {
+					jQuery('#results').html('');
+					results.forEach(function (clase) {
+						console.log(clase);
+						var lafecha = clase.fecha.split(/T\./ig);
+
+						var mediaItem = jQuery('<div class="media"></div>');
+						mediaItem.append('<a class="pull-left " href="#"><img src="' + clase.entrenador.avatar + '" class="img-circle"></a>');
+						mediaItem.append('<div class="media-body"><small>' + lafecha[0] + ' ' + lafecha[1] + 'hrs</small><h4 class="media-heading"><a href="#">' + clase.deporte.nombre + '</a> / ' + clase.nombre + '</h4><b>' + clase.entrenador.nombre + '</b><br> ' + clase.establecimiento.direccion + ' </div>');
+						mediaItem.appendTo('#results');
+					});
+				});
+			});
+
 
 		}
 

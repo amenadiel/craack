@@ -1,0 +1,110 @@
+{
+	"name": "Clase",
+	"options": {
+		"idInjection": false,
+		"mysql": {
+			"schema": "craack",
+			"table": "clase"
+		},
+		"relations": {
+			"establecimiento": {
+				"model": "Establecimiento",
+				"type": "belongsTo",
+				"foreignKey": "idEstablecimiento"
+			},
+			"entrenador": {
+				"model": "Entrenador",
+				"type": "belongsTo",
+				"foreignKey": "idEntrenador"
+			},
+			"deporte": {
+				"model": "Deporte",
+				"type": "belongsTo",
+				"foreignKey": "idDeporte"
+			}
+		}
+	},
+	"properties": {
+		"id": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"id": 1,
+			"mysql": {
+				"columnName": "id",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"fecha": {
+			"type": "Date",
+			"required": false,
+			"length": null,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "fecha",
+				"dataType": "datetime",
+				"dataLength": null,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"idEntrenador": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id_entrenador",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"idDeporte": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id_deporte",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"idEstablecimiento": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id_establecimiento",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"nombre": {
+			"type": "String",
+			"required": false
+
+		}
+	}
+}

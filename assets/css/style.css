@@ -22,6 +22,10 @@ body.craack {
 .craack .app {
   background-color: white;
 }
+.craack #results img {
+  width:100px;
+  height:100px;
+}
 
 .navbar-toggle {
   float: left;

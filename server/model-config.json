@@ -24,17 +24,31 @@
 		"dataSource": "db",
 		"public": false
 	},
-
 	"Person": {
 		"dataSource": "db",
 		"public": true
 	},
-	"deporte": {
+
+	"Clase": {
 		"dataSource": "craackmysql",
 		"public": true
 	},
-	"comuna": {
+	"Comuna": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Deporte": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Entrenador": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Establecimiento": {
 		"dataSource": "craackmysql",
 		"public": true
 	}
+
+
 }
