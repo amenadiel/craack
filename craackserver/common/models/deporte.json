@@ -1,0 +1,20 @@
+{
+  "name": "deporte",
+  "base": "PersistedModel",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "icono": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
