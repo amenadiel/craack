@@ -1,13 +1,20 @@
 {
-  "name": "Comuna",
-  "base": "PersistedModel",
-  "properties": {
-    "nombre": {
-      "type": "string"
-    }
-  },
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": []
+	"name": "comuna",
+	"base": "PersistedModel",
+	"options": {
+		"idInjection": false,
+		"craackmysql": {
+			"schema": "craack",
+			"table": "comuna"
+		}
+	},
+	"properties": {
+		"nombre": {
+			"type": "string"
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [],
+	"methods": []
 }

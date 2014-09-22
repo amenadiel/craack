@@ -1,13 +1,13 @@
 {
-  "name": "Deporte",
-  "base": "PersistedModel",
-  "properties": {
-    "nombre": {
-      "type": "string"
-    }
-  },
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": []
+	"name": "deporte",
+	"base": "PersistedModel",
+	"properties": {
+		"nombre": {
+			"type": "string"
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [],
+	"methods": []
 }
