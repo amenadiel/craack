@@ -1,47 +1,54 @@
 {
-  "_meta": {
-    "sources": [
-      "../common/models",
-      "./models"
-    ]
-  },
-  "User": {
-    "dataSource": "db"
-  },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
-  },
-  "deporte": {
-    "dataSource": "craackmysql",
-    "public": true
-  },
-  "comuna": {
-    "dataSource": "craackmysql",
-    "public": true
-  },
-  "Person": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Deporte": {
-    "dataSource": "craackmysql",
-    "public": true
-  },
-  "Comuna": {
-    "dataSource": "craackmysql",
-    "public": true
-  }
+	"_meta": {
+		"sources": [
+			"../common/models",
+			"./models"
+		]
+	},
+	"User": {
+		"dataSource": "db"
+	},
+	"AccessToken": {
+		"dataSource": "db",
+		"public": false
+	},
+	"ACL": {
+		"dataSource": "db",
+		"public": false
+	},
+	"RoleMapping": {
+		"dataSource": "db",
+		"public": false
+	},
+	"Role": {
+		"dataSource": "db",
+		"public": false
+	},
+	"Person": {
+		"dataSource": "db",
+		"public": true
+	},
+
+	"Clase": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Comuna": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Deporte": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Entrenador": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Establecimiento": {
+		"dataSource": "craackmysql",
+		"public": true
+	}
+
+
 }

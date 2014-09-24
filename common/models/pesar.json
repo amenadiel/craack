@@ -1,0 +1,14 @@
+{
+  "name": "pesar",
+  "plural": "pesares",
+  "base": "PersistedModel",
+  "properties": {
+    "nombre": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

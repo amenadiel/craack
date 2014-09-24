@@ -1,0 +1,176 @@
+{
+	"name": "Entrenador",
+	"plural": "Entrenadores",
+	"options": {
+		"idInjection": false,
+		"mysql": {
+			"schema": "craack",
+			"table": "entrenador"
+		},
+		"relations": {
+			"deporte": {
+				"model": "Deporte",
+				"type": "belongsTo",
+				"foreignKey": "especialidad"
+			},
+			"clase": {
+				"model": "Clase",
+				"type": "hasMany",
+				"foreignKey": "idEntrenador"
+			}
+		}
+	},
+	"properties": {
+		"id": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"id": 1,
+			"mysql": {
+				"columnName": "id",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"nombre": {
+			"type": "String",
+			"required": false,
+			"length": 765,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "nombre",
+				"dataType": "varchar",
+				"dataLength": 765,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"mail": {
+			"type": "String",
+			"required": false,
+			"length": 192,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "mail",
+				"dataType": "varchar",
+				"dataLength": 192,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"avatar": {
+			"type": "String",
+			"required": false,
+			"length": 765,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "avatar",
+				"dataType": "varchar",
+				"dataLength": 765,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"url": {
+			"type": "String",
+			"required": false,
+			"length": 765,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "url",
+				"dataType": "varchar",
+				"dataLength": 765,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"fechaInscrito": {
+			"type": "Date",
+			"required": false,
+			"length": null,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "fecha_inscrito",
+				"dataType": "datetime",
+				"dataLength": null,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"lastSeen": {
+			"type": "Date",
+			"required": false,
+			"length": null,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "last_seen",
+				"dataType": "timestamp",
+				"dataLength": null,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"description": {
+			"type": "String",
+			"required": false,
+			"length": 65535,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "description",
+				"dataType": "text",
+				"dataLength": 65535,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "YES"
+			}
+		},
+		"fono": {
+			"type": "String",
+			"required": false,
+			"length": 36,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "fono",
+				"dataType": "varchar",
+				"dataLength": 36,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"especialidad": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "especialidad",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		}
+	}
+}

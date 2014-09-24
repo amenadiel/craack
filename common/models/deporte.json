@@ -1,13 +1,80 @@
 {
-  "name": "Deporte",
-  "base": "PersistedModel",
-  "properties": {
-    "nombre": {
-      "type": "string"
-    }
-  },
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": []
+	"name": "Deporte",
+	"options": {
+		"idInjection": false,
+		"mysql": {
+			"schema": "craack",
+			"table": "deporte"
+		},
+		"relations": {
+			"clase": {
+				"model": "Clase",
+				"type": "hasMany",
+				"foreignKey": "idDeporte"
+			}
+		}
+	},
+	"properties": {
+		"id": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"id": 1,
+			"mysql": {
+				"columnName": "id",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"nombre": {
+			"type": "String",
+			"required": false,
+			"length": 192,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "nombre",
+				"dataType": "varchar",
+				"dataLength": 192,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"icono": {
+			"type": "String",
+			"required": false,
+			"length": 765,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "icono",
+				"dataType": "varchar",
+				"dataLength": 765,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"descripcion": {
+			"type": "String",
+			"required": false,
+			"length": 65535,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "descripcion",
+				"dataType": "text",
+				"dataLength": 65535,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		}
+	}
 }

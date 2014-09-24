@@ -1,13 +1,84 @@
 {
-  "name": "Comuna",
-  "base": "PersistedModel",
-  "properties": {
-    "nombre": {
-      "type": "string"
-    }
-  },
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": []
+	"name": "Comuna",
+	"options": {
+		"idInjection": false,
+		"mysql": {
+			"schema": "craack",
+			"table": "comuna"
+		},
+		"relations": {
+			"establecimiento": {
+				"model": "Establecimiento",
+				"type": "hasMany",
+				"foreignKey": "idComuna"
+			}
+		}
+	},
+	"properties": {
+		"id": {
+			"type": "Number",
+			"id": 1,
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"nombre": {
+			"type": "String",
+			"required": false,
+			"length": 96,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "nombre",
+				"dataType": "varchar",
+				"dataLength": 96,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"centro": {
+			"type": "GeoPoint",
+			"required": false,
+			"length": null,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "centro",
+				"dataType": "point",
+				"dataLength": null,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"region": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "region",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [],
+	"methods": []
 }

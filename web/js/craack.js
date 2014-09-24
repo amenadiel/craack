@@ -7,6 +7,11 @@ requirejs.config({
 	//config is relative to the baseUrl, and
 	//never includes a ".js" extension since
 	//the paths config could be for a directory.
+	shim: {
+		'facebook': {
+			exports: 'FB'
+		}
+	},
 	paths: {
 		app: '../app',
 		visualizations: '../visualizations',
@@ -17,8 +22,11 @@ requirejs.config({
 		plugins: '../plugins',
 		'underscore': '/js/lib/underscore-min',
 		'backbone': '/js/lib/backbone-min',
+		'facebook': '//connect.facebook.net/en_US/all'
 	}
 });
+
+
 
 if (typeof jQuery === 'function') {
 	//jQuery already loaded, just use that
@@ -40,7 +48,8 @@ require(['jquery',
 	'views/signuptrainer',
 	'bootstrap.min',
 	'select2.min',
-	'jasny-bootstrap.min'
+	'jasny-bootstrap.min',
+	//'app/facebook_auth'
 ], function (jQuery,
 	_,
 	Backbone,
@@ -107,11 +116,45 @@ require(['jquery',
 
 	jQuery(document).ready(function () {
 
+		jQuery(document).on('click', '.open_loginuser', function () {
+			jQuery('.navmenu').offcanvas('hide');
+			_.delay(function () {
+				jQuery('#loginuser').modal('show');
+			}, 1000);
+
+		});
+
+		jQuery(document).on('click', '.open_signupuser', function () {
+			jQuery('.navmenu').offcanvas('hide');
+			_.delay(function () {
+				jQuery('#signupuser').modal('show');
+			}, 1000);
+
+
+		});
+
+		jQuery(document).on('click', '.open_signuptrainer', function () {
+			jQuery('.navmenu').offcanvas('hide');
+			_.delay(function () {
+				jQuery('#signuptrainer').modal('show');
+			}, 1000);
+
+		});
+
+		jQuery(document).on('click', '.open_logintrainer', function () {
+			jQuery('.navmenu').offcanvas('hide');
+			_.delay(function () {
+				jQuery('#logintrainer').modal('show');
+			}, 1000);
+
+		});
+
 		console.log('Starting the craack');
 		Backbone.history.start({
 			//pushState: true,
 			//root: '/'
 		});
+
 
 	});
 });
