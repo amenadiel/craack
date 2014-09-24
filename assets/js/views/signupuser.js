@@ -21,7 +21,7 @@ define([
 			'<h4 class="modal-title" id="signupuserLabel"><i class="glyphicon glyphicon-user"></i> Inscribirse como Usuario</h4>',
 			'</div>',
 			'<div class="modal-body">',
-		'<div id="status"></div>',
+			'<div id="status"></div>',
 			'<form role="form" class="form-inline">',
 			'<div class="form-group" id="formsignupuser">',
 			'<label for="signupuserInputEmail1">Email</label>',
@@ -43,10 +43,10 @@ define([
 			'</div>',
 		].join(''),
 
-		initialize: function () {
+		initialize: function (callback) {
 
 			jQuery(this.el).append(this.content);
-
+			if (callback) callback();
 		},
 
 

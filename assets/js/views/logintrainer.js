@@ -43,10 +43,10 @@ define([
 			'</div>',
 		].join(''),
 
-		initialize: function () {
+		initialize: function (callback) {
 
 			jQuery(this.el).append(this.content);
-
+			if (callback) callback();
 		},
 
 

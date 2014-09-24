@@ -30,11 +30,16 @@ define([
 			'</div>'
 		].join(''),
 
-		homescreen: ['<div style="text-align:center;" class=" media homescreen">',
+		homescreen: [
+			'<div style="text-align:center;height:auto;min-height:200vw;" id="homescreen" class=" media homescreen">',
+			'</div>'
+		].join(''),
+
+
+		firstblock: ['<div style="margin:2%;">',
 			'<h2>¡CONVIERTE EN UN CR<b>AA</b>CK, HOY!<br/>',
 			'<small>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado</small>',
 			'</h2>',
-			'<div style="margin:2%;">',
 			'<table class="table table-bordered" id="imgs" style="padding:2%;">',
 			'<tr>',
 			'<td colspan="2"><div class="v1-11"></div></td>',
@@ -50,7 +55,10 @@ define([
 			'<td colspan="2"><div class="v1-12"></div></td>',
 			'</tr>',
 			'</table>',
-			'</div>',
+			'</div>'
+		].join(''),
+
+		secondblock: ['<div style="margin:2%;">',
 			'<h2>Un CR<b>AA</b>CK, no nace,<br/>',
 			'Un CR<b>AA</b>CK se hace.',
 			'</h2>',
@@ -71,7 +79,10 @@ define([
 			'</p>',
 			'<br>',
 			'<button type="button" ng-model="practicar.buscar"  data-toggle="modal" data-target="#signupuser" class="btn btn-craack ">COMENZAR AHORA</button>',
-			'<div class="blue_landing ">',
+			'</div>'
+		].join(''),
+
+		bluelanding: ['<div class="blue_landing ">',
 			'<a href="#" class="btn-left"><i class="fa fa-chevron-left"></i></a>',
 			'<h2>ENTRENA CON LOS MEJORES</h2>',
 			'<h3>TENEMOS A LOS MEJORES PROFESORES, EN TODAS LAS DISCIPLINAS, CERTIFICADOS PARA TI</h3>',
@@ -79,7 +90,10 @@ define([
 			'<a href="#" class="btn-right"><i class="fa fa-chevron-right"></i></a>',
 			'</div>',
 			'<br>',
-			'<br>',
+			'<br>'
+		].join(''),
+
+		lastblock: ['<div style="margin:2%;min-height: 500px;">',
 			'<h2>QUIERES SER ENTRENADOR?</h2>',
 			'<p>',
 			'Te ayudamos a...',
@@ -106,27 +120,29 @@ define([
 			'<br>',
 			'<br>',
 			'<br>',
-			'<br>',
 			'<button type="button"  class="btn btn-craack " data-toggle="modal" data-target="#logintrainer">INGRESAR COMO ENTRENADOR</button>',
 			'<br>',
-			'<br>',
 			'<p>Tú solo entrénalos…. Nosotros hacemos el resto.</p>',
-			'<br>',
-			'<br>',
 			'</div>'
+
 		].join(''),
 
 		initialize: function () {
 			this.el = this.el || '#maincontainer';
 			console.log('initializing landing');
-			jQuery(this.el).html(this.homelogo);
+			jQuery('#maincontainer').html(this.homelogo);
+			jQuery(this.el).append(this.homescreen);
 
 		},
 
 		render: function () {
 			//console.log('rendering landing', jQuery(this.el), this.homelogo);
 
-			jQuery(this.el).append(this.homescreen);
+
+			jQuery('#homescreen').append(this.firstblock);
+			jQuery('#homescreen').append(this.secondblock);
+			jQuery('#homescreen').append(this.bluelanding);
+			jQuery('#homescreen').append(this.lastblock);
 		}
 
 

@@ -14,7 +14,7 @@ define([
 		el: '#maincontainer',
 
 
-		homescreen: ['<div class="homescreen margintop">',
+		homescreen: ['<div class="homescreen">',
 			'<h2>&nbsp; Búsqueda de CR<b>AA</b>CK',
 			'</h2>',
 			'<!-- Nav tabs -->',
@@ -53,9 +53,10 @@ define([
 			'<div class="tab-pane" id="messages">Buscar por amigos</div>',
 			'</div>',
 			'<br>',
-			'<div id="results" style="padding:20px;margin-bottom: 100px;">',
+			'<div id="results" style="padding:20px;">',
 
 			'<div>',
+			'<div style="height:5vw;">&nbsp;</div>',
 			'</div>'
 		].join(''),
 
@@ -116,21 +117,6 @@ define([
 					});
 				}
 
-				jQuery.ajax({
-					url: '/api/Clases?filter[include]=establecimiento&filter[include]=deporte&filter[include]=entrenador&' + selectedoptions.join('&'),
-					type: 'GET',
-					dataType: 'json'
-				}).done(function (results) {
-					jQuery('#results').html('');
-					results.forEach(function (clase) {
-						console.log(clase);
-						var lafecha = clase.fecha.split(/T\./ig);
-				} else {
-					jQuery('#deportes option:selected').each(function () {
-						var sportid = 'filter[where][idDeporte][inq]=' + jQuery(this).attr('id');
-						selectedoptions.push(sportid);
-					});
-				}
 
 				jQuery.ajax({
 					url: '/api/Clases?filter[include]=establecimiento&filter[include]=deporte&filter[include]=entrenador&' + selectedoptions.join('&'),

@@ -40,12 +40,12 @@ require(['jquery',
 	'backbone',
 	'views/landing',
 	'views/help',
+	'views/navmenu',
+	'views/navbar',
 	'views/invitar_amigos',
 	'views/search',
-	'views/logintrainer',
-	'views/loginuser',
-	'views/signupuser',
-	'views/signuptrainer',
+	'views/footer',
+
 	'bootstrap.min',
 	'select2.min',
 	'jasny-bootstrap.min',
@@ -55,13 +55,12 @@ require(['jquery',
 	Backbone,
 	LandingView,
 	HelpView,
+	navmenuView,
+	navbarView,
 	InvitarView,
 	SearchView,
-	LoginTrainerView,
-	LoginUserView,
-	SignupUserView,
-	SignupTrainerView) {
-	console.log('estamos', LoginTrainerView);
+	footerView
+) {
 
 
 	var AppRouter = Backbone.Router.extend({
@@ -79,21 +78,25 @@ require(['jquery',
 
 		},
 		initialize: function () {
-			console.log('initializing router', LoginTrainerView);
-			var logintrainerModal = new LoginTrainerView();
-			var logintuserModal = new LoginUserView();
-			var signupuserModal = new SignupUserView();
-			var signuptrainerModal = new SignupTrainerView();
+			var navmenuview = new navmenuView();
+			var navbarview = new navbarView();
+
+			var footerview = new footerView();
+
+
 		},
 		home: function (hash) {
 			console.log('home', hash);
 			var landing = new LandingView();
 			landing.render();
+
+
 		},
 		search: function (hash) {
 			console.log('search');
 			var search = new SearchView();
 			search.render();
+
 		},
 		login: function (hash) {
 			console.log('login');
@@ -118,34 +121,39 @@ require(['jquery',
 
 		jQuery(document).on('click', '.open_loginuser', function () {
 			jQuery('.navmenu').offcanvas('hide');
-			_.delay(function () {
-				jQuery('#loginuser').modal('show');
-			}, 1000);
-
+			require(['views/loginuser'], function (LoginUserView) {
+				var logintuserModal = new LoginUserView(function () {
+					jQuery('#loginuser').modal('show');
+				});
+			});
 		});
 
 		jQuery(document).on('click', '.open_signupuser', function () {
 			jQuery('.navmenu').offcanvas('hide');
-			_.delay(function () {
-				jQuery('#signupuser').modal('show');
-			}, 1000);
-
-
+			require(['views/signupuser'], function (SignupUserView) {
+				var signupuserModal = new SignupUserView(function () {
+					jQuery('#signupuser').modal('show');
+				});
+			});
 		});
 
 		jQuery(document).on('click', '.open_signuptrainer', function () {
 			jQuery('.navmenu').offcanvas('hide');
-			_.delay(function () {
-				jQuery('#signuptrainer').modal('show');
-			}, 1000);
 
+			require(['views/signuptrainer'], function (SignupTrainerView) {
+				var signuptrainerModal = new SignupTrainerView(function () {
+					jQuery('#signupuser').modal('show');
+				});
+			});
 		});
 
 		jQuery(document).on('click', '.open_logintrainer', function () {
 			jQuery('.navmenu').offcanvas('hide');
-			_.delay(function () {
-				jQuery('#logintrainer').modal('show');
-			}, 1000);
+			require(['views/logintrainer'], function (LoginTrainerView) {
+				var logintrainerModal = new LoginTrainerView(function () {
+					jQuery('#signupuser').modal('show');
+				});
+			})
 
 		});
 

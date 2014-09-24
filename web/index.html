@@ -1,120 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/assets/favicon.ico">
-    <meta http-equiv="cache-control" content="max-age=0"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta name="google-site-verification" content="lMBfWMzG4ug2f3z1UN2LqBsbDRLF-FP5dQ3D7StOvD4" />
-    <title>Craack</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- Optional theme -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/assets/favicon.ico">
+        <meta http-equiv="cache-control" content="max-age=0"/>
+        <meta http-equiv="cache-control" content="no-cache"/>
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta name="google-site-verification" content="lMBfWMzG4ug2f3z1UN2LqBsbDRLF-FP5dQ3D7StOvD4" />
+        <title>Craack</title>
+        <!-- Latest compiled and minified CSS -->
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+            <script data-main="/js/craack" src="/js/lib/require.js"></script>
+        </head>
+        <body class="craack">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+            <div id="maincontainer">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-      <script data-main="/js/craack" src="/js/lib/require.js"></script>
-    </head>
-    <body class="craack">
-      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-        <h1><a class="navmenu-brand" href="#">CRAACK</a></h1>
-        <ul class="nav navmenu-nav">
+            </div>
+            <div id="footer" class="navbar-bottom">
 
-          <li><a class="list-group-item " href="#/" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body"><i class="fa fa-home"></i>Inicio</a></li>
-          <li><a class="list-group-item " href="#/busqueda" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body"><i class="marker"></i>Búsqueda de entrenamientos</a></li>
-          <li><a class="list-group-item open_loginuser" href="#"><i class="alumno"></i>Iniciar sesión como alumno</a></li>
-          <li><a class="list-group-item open_logintrainer" href="#"><i class="stopwatch"></i>Iniciar sesión como entrenador</a></li>
-          <li><a class="list-group-item " data-toggle="modal" data-target="#inviteusers" href="#"><i class="users"></i>Invitar amigos</a></li>
-          <li><a class="list-group-item "  href="#/help" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body"><i class="ayuda"></i>Ayuda</a></li>
-        </ul>
-      </div>
+            </div>
+        
+            <div id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas">
 
-      
-      <!-- Static navbar -->
-      <div class="navbar navbar-app navbar-default navbar-fixed-top" role="navigation">
-        <div style="padding:10px 10px 10px 0;" class="btn-group pull-left">
-          <button class="btn btn-navbar sidebar-toggle btn-transparent" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" ><i class="fa fa-bars"></i> MENU</button>
-        </div>
-        <div class="navbar-brand navbar-brand-center" yield-to="title">
-          <span>CR<b>AA</b>CK</span>
-        </div>
-        <div style="padding:10px;" id="status"  class="btn-group pull-right" yield-to="navbarAction">
-          <button class="btn btn-navbar btn-transparent open_loginuser" >INICIA SESIÓN</button>
-       <button class="btn btn-navbar btn-transparent btn-border open_signupuser" style="border:1px solid white;">INSCRÍBETE</div>-->
-         <div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
-      </div>
-    
+            </div>
 
-<!--<fb:login-button max_rows="1" size="large" show_faces="false" auto_logout_link="true"></fb:login-button>
-        <div >
-          <div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>-->
+            <!-- Static navbar -->
+            <div id="navbar" class="navbar navbar-app navbar-default navbar-fixed-top" role="navigation">
 
-    <div id="modals">
-    <div class="modal" id="inviteusers" tabindex="-1" role="dialog" aria-labelledby="inviteusersLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="inviteusersLabel"><i class="glyphicon glyphicon-bullhorn"></i> Invitar Amigos</h4>
-          </div>
-          <div class="modal-body">
-            Invita a tus amigos via mail, twitter o facebook
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </div>
 
+            <!--<fb:login-button max_rows="1" size="large" show_faces="false" auto_logout_link="true"></fb:login-button>
+                    <div >
+                <div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>-->
+
+            
+        <!-- Modal -->
         <div class="modal" id="helpmodal" tabindex="-1" role="dialog" aria-labelledby="helpmodalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="helpmodalLabel"><i class="glyphicon glyphicon-question-sign"></i> Ayuda de Craack</h4>
-          </div>
-          <div class="modal-body">
-            Cuadro de ayuda
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="helpmodalLabel"><i class="glyphicon glyphicon-question-sign"></i> Ayuda de Craack</h4>
+                    </div>
+                    <div class="modal-body">
+                        Cuadro de ayuda
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>    
-    </div>
-    <div id="maincontainer">
-      
-      </div>
-      <div id="footer" class="navbar-bottom">
-        <div class="row">
-          <div class="col-sm-3 col-xs-3 footer-left">
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-instagram fa-navbar"></i></a>
-            <a href="https://www.facebook.com/craack.wellness" class="img-circle"><i class="fa fa-facebook fa-navbar"></i></a>
-            <a href="http://craack.com/" class="img-circle"><i class="fa fa-linkedin fa-navbar"></i></a>
-          </div>
-          <div class="col-sm-6 col-xs-6">
-            <h2>CR<b>AA</b>CK</h2>
-            <p>powered by Sailing Branding SPA</p>
-            <p>Copyright 2014, All rights reserved. 218 9th Street, 94103 San Francisco CA</p>
-          </div>
-          <div class="footer-right col-sm-3 col-xs-3 ">
-            <a href="javascript:void(0)" class="btn btn-navbar">ENTRENADOR</a>
-            <a href="#" class="btn btn-default open_signuptrainer">SIGN UP</a>
-            <a href="#" data-toggle="modal" data-target="#logintrainer" class="btn btn-default open_logintrainer">LOGIN</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-
-  </body>
-</html>
+        <div id="modals">
+            <div class="modal" id="inviteusers" tabindex="-1" role="dialog" aria-labelledby="inviteusersLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="inviteusersLabel"><i class="glyphicon glyphicon-bullhorn"></i> Invitar Amigos</h4>
+                        </div>
+                        <div class="modal-body">
+                            Invita a tus amigos via mail, twitter o facebook
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

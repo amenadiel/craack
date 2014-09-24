@@ -13,7 +13,7 @@ define([
 		el: '#maincontainer',
 
 
-		homescreen: ['<div style="padding-left:20px;padding-right:20px;" class="homescreen margintop">',
+		homescreen: ['<div style="padding-left:20px;padding-right:20px;" class="homescreen">',
 			'<h2>Ayuda de CR<b>AA</b>CK',
 			'</h2>',
 			'<p>',
