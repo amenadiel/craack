@@ -125,6 +125,22 @@ define([
 					results.forEach(function (clase) {
 						console.log(clase);
 						var lafecha = clase.fecha.split(/T\./ig);
+				} else {
+					jQuery('#deportes option:selected').each(function () {
+						var sportid = 'filter[where][idDeporte][inq]=' + jQuery(this).attr('id');
+						selectedoptions.push(sportid);
+					});
+				}
+
+				jQuery.ajax({
+					url: '/api/Clases?filter[include]=establecimiento&filter[include]=deporte&filter[include]=entrenador&' + selectedoptions.join('&'),
+					type: 'GET',
+					dataType: 'json'
+				}).done(function (results) {
+					jQuery('#results').html('');
+					results.forEach(function (clase) {
+						console.log(clase);
+						var lafecha = clase.fecha.split(/T\./ig);
 
 						var mediaItem = jQuery('<div class="media"></div>');
 						mediaItem.append('<a class="pull-left " href="#"><img src="' + clase.entrenador.avatar + '" class="img-circle"></a>');
