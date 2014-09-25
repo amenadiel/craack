@@ -15,7 +15,7 @@ define([
 		homelogo: [
 			'<div class="homelogo" >',
 			'<h1>ENCUENTRA A TU MEJOR ENTRENADOR',
-			'<small>Libera tu máximo potencial</small>',
+			'<small>¡LOGRA TUS METAS AHORA!</small>',
 			'</h1>',
 			'<div class="search_landing ">',
 			'<div class="row">',

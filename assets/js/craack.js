@@ -39,7 +39,7 @@ require(['jquery',
 	'underscore',
 	'backbone',
 	'views/landing',
-	'views/help',
+	'views/ayuda',
 	'views/navmenu',
 	'views/navbar',
 	'views/invitar_amigos',
@@ -49,7 +49,7 @@ require(['jquery',
 	'bootstrap.min',
 	'select2.min',
 	'jasny-bootstrap.min',
-	//'app/facebook_auth'
+	'app/facebook_auth'
 ], function (jQuery,
 	_,
 	Backbone,
@@ -139,19 +139,21 @@ require(['jquery',
 
 		jQuery(document).on('click', '.open_signuptrainer', function () {
 			jQuery('.navmenu').offcanvas('hide');
-
+			console.log('open_signuptrainer');
 			require(['views/signuptrainer'], function (SignupTrainerView) {
+				console.log('open_signuptrainer', SignupTrainerView);
 				var signuptrainerModal = new SignupTrainerView(function () {
-					jQuery('#signupuser').modal('show');
+					jQuery('#signuptrainer').modal('show');
 				});
 			});
 		});
 
 		jQuery(document).on('click', '.open_logintrainer', function () {
+			console.log('open_logintrainer');
 			jQuery('.navmenu').offcanvas('hide');
 			require(['views/logintrainer'], function (LoginTrainerView) {
 				var logintrainerModal = new LoginTrainerView(function () {
-					jQuery('#signupuser').modal('show');
+					jQuery('#logintrainer').modal('show');
 				});
 			})
 

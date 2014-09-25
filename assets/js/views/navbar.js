@@ -19,10 +19,10 @@ define([
 			'<div class="navbar-brand navbar-brand-center" yield-to="title">',
 			'<span>CR<b>AA</b>CK</span>',
 			'</div>',
-			'<div style="padding:10px;" id="status"  class="btn-group pull-right" yield-to="navbarAction">',
+			'<div style="padding:10px;min-width:200px;" id="status"  class="btn-group pull-right" yield-to="navbarAction">',
 			'<button class="btn btn-navbar btn-transparent open_loginuser" >INICIA SESIÓN</button>',
 			'<button class="btn btn-navbar btn-transparent btn-border open_signupuser" >INSCRÍBETE</div>',
-			'<div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true">',
+			'<div class="fb-login-button" style="display:none;" data-size="large" data-show-faces="false" data-auto-logout-link="true">',
 			'</div>',
 		].join(''),
 

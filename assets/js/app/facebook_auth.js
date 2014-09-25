@@ -67,7 +67,8 @@ require(['jquery', 'facebook'], function ($, FB) {
 		console.log('Welcome!  Fetching your information.... ');
 		FB.api('/me', function (response) {
 			console.log('Successful login', response);
-			jQuery('#status').prepend('<img src="//graph.facebook.com/' + response.id + '/picture" style="float:left;width:40px;height:40px;margin-top:-7px;" class="img-circle" />');
+			jQuery('#status').html('').prepend('<img src="//graph.facebook.com/' + response.id + '/picture" style="float:left;margin-right:20px;width:40px;height:40px;margin-top:-7px;" class="img-circle" />');
+			jQuery('#navbar .fb-login-button').appendTo('#status');
 		});
 	};
 });

@@ -9,7 +9,7 @@ define([
 ], function (jQuery, _, Backbone) {
 
 
-	var HelpView = Backbone.View.extend({
+	var SearchView = Backbone.View.extend({
 
 		el: '#maincontainer',
 
@@ -144,5 +144,5 @@ define([
 	});
 
 
-	return HelpView;
+	return SearchView;
 });
