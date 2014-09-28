@@ -1,0 +1,104 @@
+{
+  "name": "Usuario",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "craack",
+      "table": "usuario"
+    },
+    "relations": {}
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "nombre": {
+      "type": "String",
+      "required": false,
+      "length": 192,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "nombre",
+        "dataType": "varchar",
+        "dataLength": 192,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "mail": {
+      "type": "String",
+      "required": false,
+      "length": 192,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "mail",
+        "dataType": "varchar",
+        "dataLength": 192,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "avatar": {
+      "type": "String",
+      "required": false,
+      "length": 765,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "avatar",
+        "dataType": "varchar",
+        "dataLength": 765,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "celular": {
+      "type": "String",
+      "required": false,
+      "length": 42,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "celular",
+        "dataType": "varchar",
+        "dataLength": 42,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "isReal": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "is_real",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    }
+  }
+}

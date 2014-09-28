@@ -1,16 +1,17 @@
 {
-	"name": "Deporte",
+	"name": "Especialidad",
+	"plural": "Especialidades",
 	"options": {
 		"idInjection": false,
 		"mysql": {
 			"schema": "craack",
-			"table": "deporte"
+			"table": "especialidad"
 		},
 		"relations": {
 			"clase": {
 				"model": "Clase",
 				"type": "hasMany",
-				"foreignKey": "idDeporte"
+				"foreignKey": "idEspecialidad"
 			}
 		}
 	},
@@ -62,6 +63,21 @@
 			}
 		},
 		"descripcion": {
+			"type": "String",
+			"required": false,
+			"length": 65535,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "descripcion",
+				"dataType": "text",
+				"dataLength": 65535,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"categoria": {
 			"type": "String",
 			"required": false,
 			"length": 65535,

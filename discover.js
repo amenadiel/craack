@@ -26,7 +26,7 @@ console.log('Will use datasource', 'craackmysql');
 
 });*/
 
-ds.discoverSchema('establecimiento', {
+ds.discoverSchema('usuario', {
 	owner: 'craack',
 	visited: {},
 	associations: true

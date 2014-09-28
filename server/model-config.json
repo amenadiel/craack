@@ -37,11 +37,15 @@
 		"dataSource": "craackmysql",
 		"public": true
 	},
-	"Deporte": {
+	"Especialidad": {
 		"dataSource": "craackmysql",
 		"public": true
 	},
-	"Entrenador": {
+	"Profesor": {
+		"dataSource": "craackmysql",
+		"public": true
+	},
+	"Usuario": {
 		"dataSource": "craackmysql",
 		"public": true
 	},

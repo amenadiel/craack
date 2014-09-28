@@ -26,8 +26,7 @@ define([
 
 			'<!-- Tab panes -->',
 			'<div style="padding:0 20px; " class="tab-content">',
-			'<div class="tab-pane active" id="home">Buscar por deporte<br><br>',
-
+			'<div class="tab-pane active" id="home">Buscar por deporte<br>',
 			'<div class="row selectdeporte">',
 			'<div class="col-sm-8 col-xs-8" style="text-align:right;padding-top:5px;">',
 			'<select multiple id="deportes" style="width:453px;" class="invisible" ></select>',
@@ -36,36 +35,22 @@ define([
 			'<button class="btn btn-craack" id="buscardeporte">Buscar</button>',
 			'</div>',
 			'</div>',
+
 			'</div>',
+			'<div class="tab-pane" id="profile">Buscar por comuna<br>',
 
-
-			'<div class="tab-pane" id="profile">Buscar por comuna<br><br>',
 			'<div class="row selectcomuna">',
 			'<div class="col-sm-8 col-xs-8">',
-			'<select multiple id="comunas" style="width:453px;margin-top:5px;" class="invisible" ></select>',
+			'<select multiple id="comunas" style="width:453px" class="invisible" ></select>',
 			'</div>',
 			'<div class="col-sm-4 col-xs-4" style="text-align:center;">',
 			'<button class="btn btn-craack" id="buscarcomuna">Buscar</button>',
 			'</div>',
 			'</div>',
-			'</div>',
-
-
-			'<div class="tab-pane" id="messages">Buscar por amigos<br>',
-
-			'<div class="row selectcomuna">',
-			'<div class="col-sm-8 col-xs-8">',
-			'<h3>',
-			'Pronto podrás buscar qué clases han tomado tus amigos',
-			'</h3>',
-			'</div>',
-			'<div class="col-sm-4 col-xs-4" style="text-align:center;">',
-			//'<button class="btn btn-craack" id="buscarcomuna">Buscar</button>',
-			'</div>',
-			'</div>',
-
 
 			'</div>',
+
+			'<div class="tab-pane" id="messages">Buscar por amigos</div>',
 			'</div>',
 			'<br>',
 			'<div id="results" style="padding:20px;">',
@@ -87,7 +72,7 @@ define([
 			jQuery(this.el).html(this.homescreen);
 
 			jQuery.ajax({
-				url: '/api/Especialidades',
+				url: '/api/Deportes',
 				type: 'GET',
 				dataType: 'json'
 			}).done(function (data) {

@@ -27,7 +27,7 @@ define([
 			'</div>',
 			'</div>',
 			'<div class="footer-right col-sm-3 col-xs-3 ">',
-			'<div  class="btn btn-navbar">ENTRENADOR</div>',
+			'<div  class="btn btn-navbar">PROFESOR</div>',
 			'<button style="min-width:120px;margin:5px auto;display: block;" class="btn btn-transparent btn-border open_signuptrainer">SIGN UP</button>',
 			'<button style="min-width:120px;margin:5px auto;display: block;" class="btn btn-transparent btn-border open_logintrainer">LOGIN</button>',
 			'</div>',

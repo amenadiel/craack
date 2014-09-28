@@ -1,22 +1,27 @@
 {
-	"name": "Entrenador",
-	"plural": "Entrenadores",
+	"name": "Profesor",
+	"plural": "Profesores",
 	"options": {
 		"idInjection": false,
 		"mysql": {
 			"schema": "craack",
-			"table": "entrenador"
+			"table": "profesor"
 		},
 		"relations": {
-			"deporte": {
-				"model": "Deporte",
+			"especialidad": {
+				"model": "Especialidad",
 				"type": "belongsTo",
-				"foreignKey": "especialidad"
+				"foreignKey": "idEspecialidad"
 			},
 			"clase": {
 				"model": "Clase",
 				"type": "hasMany",
-				"foreignKey": "idEntrenador"
+				"foreignKey": "idProfesor"
+			},
+			"usuario": {
+				"model": "Usuario",
+				"type": "belongsTo",
+				"foreignKey": "idUsuario"
 			}
 		}
 	},
@@ -157,14 +162,29 @@
 				"nullable": "NO"
 			}
 		},
-		"especialidad": {
+		"idEspecialidad": {
 			"type": "Number",
 			"required": false,
 			"length": null,
 			"precision": 10,
 			"scale": 0,
 			"mysql": {
-				"columnName": "especialidad",
+				"columnName": "id_especialidad",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"idUsuario": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id_usuario",
 				"dataType": "int",
 				"dataLength": null,
 				"dataPrecision": 10,

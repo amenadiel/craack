@@ -13,14 +13,19 @@
 				"foreignKey": "idEstablecimiento"
 			},
 			"entrenador": {
-				"model": "Entrenador",
+				"model": "Profesor",
 				"type": "belongsTo",
-				"foreignKey": "idEntrenador"
+				"foreignKey": "idProfesor"
 			},
 			"deporte": {
-				"model": "Deporte",
+				"model": "Especialidad",
 				"type": "belongsTo",
-				"foreignKey": "idDeporte"
+				"foreignKey": "idEspecialidad"
+			},
+			"comuna": {
+				"model": "Comuna",
+				"type": "belongsTo",
+				"foreignKey": "idComuna"
 			}
 		}
 	},
@@ -56,14 +61,14 @@
 				"nullable": "NO"
 			}
 		},
-		"idEntrenador": {
+		"idProfesor": {
 			"type": "Number",
 			"required": false,
 			"length": null,
 			"precision": 10,
 			"scale": 0,
 			"mysql": {
-				"columnName": "id_entrenador",
+				"columnName": "id_profesor",
 				"dataType": "int",
 				"dataLength": null,
 				"dataPrecision": 10,
@@ -71,14 +76,14 @@
 				"nullable": "NO"
 			}
 		},
-		"idDeporte": {
+		"idEspecialidad": {
 			"type": "Number",
 			"required": false,
 			"length": null,
 			"precision": 10,
 			"scale": 0,
 			"mysql": {
-				"columnName": "id_deporte",
+				"columnName": "id_especialidad",
 				"dataType": "int",
 				"dataLength": null,
 				"dataPrecision": 10,
@@ -105,6 +110,51 @@
 			"type": "String",
 			"required": false
 
+		},
+		"lugar": {
+			"type": "String",
+			"required": false,
+			"length": 765,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "lugar",
+				"dataType": "varchar",
+				"dataLength": 765,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"idComuna": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 10,
+			"scale": 0,
+			"mysql": {
+				"columnName": "id_comuna",
+				"dataType": "int",
+				"dataLength": null,
+				"dataPrecision": 10,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"location": {
+			"type": "GeoPoint",
+			"required": false,
+			"length": null,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "location",
+				"dataType": "point",
+				"dataLength": null,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
 		}
 	}
 }
