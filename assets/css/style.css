@@ -46,10 +46,6 @@ body.craack {
   background-color:white;
   min-height: 100%;
   height: auto !important;
-  
-  /*height: -moz-calc(100% - (45px + 130px));
-  height: -webkit-calc(100% - (45px + 130px));
-  height: calc(100% - (45px + 130px));*/
   padding-top: 50px;
   margin: 0px auto -140px;
 }
@@ -89,7 +85,24 @@ body.craack {
   border: 1px solid white;
  }
 
-
+.secondblock {
+  text-align:justify;
+}
+.secondblock p {
+font-size:1.2em;
+margin:1.2em;
+font-weight:300;
+}
+.secondblock h3 {
+font-size:3em;
+}
+.craack .secondblock h2 {
+  font-size:6em;
+  margin:-5px 0;
+}
+.craack .secondblock h2 small {
+  font-size:0.5em;
+}
 
 .craack .modal-header {
   background-color:#05BBD3;
@@ -117,22 +130,24 @@ margin-left: -20%;
 }
 
 .homelogo  {
-  background-image: url(/assets/images/homepicture.jpg);
-  background-position:center bottom;
+ text-align:center;
+  background-position:center top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 101%;
   padding: 3.5vw 4vw;
   position: relative;
   height: 50vw;
+  max-height:650px;
   left: -1vw;
 
 }
 
 .homelogo h1 {
+  margin-top:12vw;
   font-size: 5vw;
   font-weight:800;
-  width:45%;
+  width:100%;
   color:white;
   line-height: 120%;
 }
@@ -156,6 +171,8 @@ margin-left: -20%;
 }
 .homescreen h2 {
   margin:1em 0 ;
+  font-size: 4em;
+  font-weight: 300;
 }
 .homescreen h2 small {
   font-size:0.5em;
@@ -177,6 +194,12 @@ margin-left: -20%;
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  color:white;
+  font-weight:700;
+  text-align:right;
+  font-size:4em;
+  padding-top: 26vw;
+  padding-right: 1vw;
 }
 
 .homescreen #imgs .v1-11 {
@@ -244,14 +267,15 @@ margin-left: -20%;
 
 
 .search_landing {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-  height: 20%;
-  top: 41vw;
-  overflow: hidden;
-  margin-left: -53%;
+position: absolute;
+bottom: 0px;
+left: 50%;
+right: 0;
+max-height: 100px;
+overflow: hidden;
+margin-left: -53%;
+background-color: rgba(0,0,0,0.5);
+padding: 1vw 0;
 }
 
 
@@ -389,7 +413,8 @@ position: relative;
 
 
 .craack .navbar-app {
-  background:#05BBD3;
+  /*background: #05BBD3;*/
+  background: rgba(5,187,211,1);
   color:#F0F0F0;
   font-weight: 400;
   border: 0 none;

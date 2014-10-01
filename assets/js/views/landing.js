@@ -12,19 +12,21 @@ define([
 
 		el: '#maincontainer',
 
+		backgrounds: ['homeclass1.jpg', 'homeclass2.jpg', 'homeclass3.jpg', 'homeclass4.jpg', 'homeclass5.jpg', 'homeclass6.jpg', 'homeclass7.jpg', 'homeclass8.jpg', 'homeclass9.jpg', 'homeclass10.jpg'],
+
+
 		homelogo: [
 			'<div class="homelogo" >',
-			'<h1>ENCUENTRA A TU MEJOR ENTRENADOR',
-			'<small>¡LOGRA TUS METAS AHORA!</small>',
+			'<h1>APRENDE CON UN CRAACK',
+			'<small>CONOCE A TU MEJOR PROFESOR, SÉ LO QUE SIEMPRE SOÑASTE</small>',
 			'</h1>',
 			'<div class="search_landing ">',
 			'<div class="row">',
-			'<div class="col-sm-1 col-xs-1"></div>',
-			'<input type="text" class="landing col-sm-4 col-xs-4" placeholder="Comuna donde quieres entrenar">',
-			'<input type="text" class="landing  col-sm-4 col-xs-4" placeholder="Deporte que quieres practicar">',
-			'<button class="button btn-craack col-sm-2 col-xs-2">',
-			'Buscar',
-			'</button>',
+			'<div class="col-sm-2 col-xs-1"></div>',
+			'<input type="text" class="landing col-sm-3 col-xs-4" placeholder="¿Qué te gustaría aprender?"/>',
+			'<input type="text" class="landing  col-sm-3 col-xs-4" placeholder="¿En qué comuna?"/>',
+			'<button class="button btn-craack col-sm-2 col-xs-2">Buscar</button>',
+			'<div class="col-sm-2 col-xs-0"></div>',
 			'</div>',
 			'</div>',
 			'</div>'
@@ -38,47 +40,48 @@ define([
 
 		firstblock: ['<div style="margin:2%;">',
 			'<h2>¡CONVIERTE EN UN CR<b>AA</b>CK, HOY!<br/>',
-			'<small>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado</small>',
+			//'<small>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado</small>',
 			'</h2>',
 			'<table class="table table-bordered" id="imgs" style="padding:2%;">',
 			'<tr>',
-			'<td colspan="2"><div class="v1-11"></div></td>',
-			'<td><div class="v1-13"></div></td>',
+			'<td colspan="2"><div class="v1-11">Arte</div></td>',
+			'<td><div class="v1-13">Maratón</div></td>',
 			'</tr>',
 			'<tr>',
-			'<td><div class="v1-15"></div></td>',
-			'<td><div class="v1-17"></div></td>',
-			'<td><div class="v1-14"></div></td>',
+			'<td width="33%"><div class="v1-15">Jardinería</div></td>',
+			'<td width="33%"><div class="v1-17" >Cocina</div></td>',
+			'<td width="33%"><div class="v1-14">Ballet</div></td>',
 			'</tr>',
 			'<tr>',
-			'<td><div class="v1-16"></div></td>',
-			'<td colspan="2"><div class="v1-12"></div></td>',
+			'<td><div class="v1-16">Piano</div></td>',
+			'<td colspan="2"><div class="v1-12">Bicicleta</div></td>',
 			'</tr>',
 			'</table>',
 			'</div>'
 		].join(''),
 
-		secondblock: ['<div style="margin:2%;">',
-			'<h2>Un CR<b>AA</b>CK, no nace,<br/>',
-			'Un CR<b>AA</b>CK se hace.',
-			'</h2>',
-			'<p>',
-			'Bienvenido a la comunidad de amantes del deporte y bienestar. <br>',
-			'Porque creemos en nosotros, creemos en ti. </p>',
-			'<p>',
-			'Nuestra meta es contactarte con la persona que liberará tu máximo potencial. <br>',
-			'Te damos la oportunidad de lograr tus objetivos, de sentirte orgulloso de tu esfuerzo, de ser feliz.',
-			'</p>',
-			'<p>',
-			'Hoy estamos comenzando al igual que tú. Esta tarea no es fácil, tú lo sabes. <br>',
-			'Apóyanos, coméntanos, estamos para escucharte y aprender de ti.',
-			'</p>',
-			'<p>',
-			'Únete a la libertad de poder elegir, de estar informados y de vivir una vida sana.<br>',
-			'Únete a la comunidad de CRAACK',
-			'</p>',
+
+
+
+
+
+		secondblock: ['<div class="row secondblock" style="margin:2%;">',
+			'<div class="col-sm-5" style="text-align:center;border-right:2px solid">',
+			'<h3>Aprende con un</h3>',
+			'<h2>CRAACK</h2>',
+			'<h2><small>y serás un</small><h2>',
+			'<h2>CRAACK</h2>',
+			'</div>',
+			'<div class="col-sm-7" style="text-align:left;">',
+			'<p>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado. </p>',
+			'<p>Nuestra meta es conectarte con la persona perfecta para que aprendas aquella disciplina en la que siempre quisiste ser bueno. </p>',
+			'<p>Conquista tus metas, con los mejores profesores, cerca de tu ubicación y con un gran equipo… tus Amigos.</p>',
+			'<p>Únete a la libertad de poder elegir, de estar informado, de lograr tus objtivos y de vivir aprendiendo.</p>',
+			'<p>Únete a la comunidad de CRAACK.</p>',
 			'<br>',
-			'<button type="button" ng-model="practicar.buscar"  data-toggle="modal" data-target="#signupuser" class="btn btn-craack ">COMENZAR AHORA</button>',
+			'</div>',
+			'<div class="col-sm-12" style="margin-top:30px;text-align:center;"><button type="button" ng-model="practicar.buscar"  data-toggle="modal" data-target="#signupuser" class="btn btn-craack ">COMENZAR AHORA</button></div>',
+
 			'</div>'
 		].join(''),
 
@@ -89,12 +92,11 @@ define([
 			'<div class="cellphone"></div>',
 			'<a href="#" class="btn-right"><i class="fa fa-chevron-right"></i></a>',
 			'</div>',
-			'<br>',
 			'<br>'
 		].join(''),
 
 		lastblock: ['<div style="margin:2%;min-height: 500px;">',
-			'<h2>QUIERES SER ENTRENADOR?</h2>',
+			'<h2>QUIERES SER PROFESOR EN CRAACK?</h2>',
 			'<p>',
 			'Te ayudamos a...',
 			'</p>',
@@ -118,12 +120,14 @@ define([
 			'</div>',
 			'</div>',
 			'<br>',
-			'<br>',
-			'<br>',
+
 			'<button type="button"  class="btn btn-craack " data-toggle="modal" data-target="#logintrainer">INGRESAR COMO ENTRENADOR</button>',
 			'<br>',
-			'<p>Tú solo entrénalos…. Nosotros hacemos el resto.</p>',
-			'</div>'
+			'<br>',
+			'<p>Tú solo demuestra que eres un CRAACK <br> …Nosotros hacemos el resto.</p>',
+			'<br>',
+			'</div>',
+			'<div style="height:100px;">&nbsp;</div>'
 
 		].join(''),
 
@@ -136,10 +140,13 @@ define([
 		},
 
 		render: function () {
-			//console.log('rendering landing', jQuery(this.el), this.homelogo);
+			var bgindex = Math.floor(Math.random() * this.backgrounds.length);
 
-
+			var homelogoimg = 'url(/assets/images/' + this.backgrounds[bgindex] + ')';
+			console.log('rendering landing', this.backgrounds, bgindex, this.backgrounds[bgindex], homelogoimg);
+			jQuery('.homelogo').css('background-image', homelogoimg);
 			jQuery('#homescreen').append(this.firstblock);
+
 			jQuery('#homescreen').append(this.secondblock);
 			jQuery('#homescreen').append(this.bluelanding);
 			jQuery('#homescreen').append(this.lastblock);

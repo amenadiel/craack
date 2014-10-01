@@ -136,6 +136,8 @@ require(['jquery',
 
 	jQuery(document).ready(function () {
 
+		jQuery('.homelogo').css('background-image', 'url(/assets/images/homeclass1.jpg)');
+
 		jQuery(document).on('click', '.open_loginuser, .open_signupuser', function () {
 			jQuery('.navmenu').offcanvas('hide');
 			require(['views/loginuser'], function (LoginUserView) {
