@@ -94,14 +94,16 @@ margin:1.2em;
 font-weight:300;
 }
 .secondblock h3 {
-font-size:3em;
+font-size:2.85em;
+font-weight: 300;
 }
 .craack .secondblock h2 {
   font-size:6em;
-  margin:-5px 0;
+  margin: -3px 0 -2px;
 }
 .craack .secondblock h2 small {
-  font-size:0.5em;
+  font-size: 0.73em;
+  font-weight: 300;
 }
 
 .craack .modal-header {
@@ -150,6 +152,7 @@ margin-left: -20%;
   width:100%;
   color:white;
   line-height: 120%;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 
 .homelogo h1 small {
@@ -159,6 +162,7 @@ margin-left: -20%;
   font-size: 0.45em;
   margin-top: 2vw;
   display:block;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 
 .margintop {
@@ -200,6 +204,7 @@ margin-left: -20%;
   font-size:4em;
   padding-top: 26vw;
   padding-right: 1vw;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 
 .homescreen #imgs .v1-11 {

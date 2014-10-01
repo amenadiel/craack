@@ -121,7 +121,7 @@ define([
 			'</div>',
 			'<br>',
 
-			'<button type="button"  class="btn btn-craack " data-toggle="modal" data-target="#logintrainer">INGRESAR COMO ENTRENADOR</button>',
+			'<button type="button"  class="btn btn-craack " data-toggle="modal" data-target="#logintrainer">INGRESAR COMO PROFESOR</button>',
 			'<br>',
 			'<br>',
 			'<p>Tú solo demuestra que eres un CRAACK <br> …Nosotros hacemos el resto.</p>',
