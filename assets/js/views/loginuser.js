@@ -22,7 +22,7 @@ define([
 			'</div>',
 			'<div class="modal-body">',
 			'<div class="row">',
-			'<div class="col-sm-5 col-xs-5">',
+		'<div class="col-sm-5 col-xs-5">',
 			'<img class="avatar" src="/assets/images/no-avatar-male.png" />',
 			'</div>',
 			'<div class="col-sm-6 col-xs-6">',
@@ -62,7 +62,7 @@ define([
 
 			'<button type="button" class="btn  btn-facebook loggedout login"><i class="fa fa-facebook fa-navbar"></i> | Inicia Sesión con Facebook</button>',
 			'<button type="button" class="btn  btn-facebook loggedin logout" style="display:none;"><i class="fa fa-facebook fa-navbar"></i> | Cerrar Sesión</button>',
-			'<button type="button" class="btn  btn-craack loggedin updatedata" style="display:none;">Actualizar Datos</button>',
+			'<button type="button" class="btn  btn-craack loggedin updatedata" style="display:none;"><i class="glyphicon glyphicon-edit"></i> Actualizar Datos</button>',
 			'</div>',
 			'</div>',
 			'</div>',

@@ -173,6 +173,11 @@ margin-left: -20%;
   
   
 }
+
+.craack .modal .input-group {
+  margin: 3px;
+}
+
 .homescreen h2 {
   margin:1em 0 ;
   font-size: 4em;

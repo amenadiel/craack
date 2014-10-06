@@ -136,7 +136,7 @@ require(['jquery',
 
 	jQuery(document).ready(function () {
 
-		jQuery('.homelogo').css('background-image', 'url(/assets/images/homeclass1.jpg)');
+
 
 		jQuery(document).on('click', '.open_loginuser, .open_signupuser', function () {
 			jQuery('.navmenu').offcanvas('hide');
@@ -165,11 +165,11 @@ require(['jquery',
 
 		jQuery(document).on('click', '.open_signuptrainer, .open_logintrainer', function () {
 			jQuery('.navmenu').offcanvas('hide');
-			console.log('open_signuptrainer');
-			require(['views/signuptrainer'], function (SignupTrainerView) {
-				console.log('open_signuptrainer', SignupTrainerView);
-				var signuptrainerModal = new SignupTrainerView(function () {
-					jQuery('#signuptrainer').modal('show');
+			console.log('logintrainer');
+			require(['views/logintrainer'], function (LoginTrainerView) {
+				console.log('open_signuptrainer', LoginTrainerView);
+				var logintrainerModal = new LoginTrainerView(function () {
+					jQuery('#logintrainer').modal('show');
 				});
 			});
 		});

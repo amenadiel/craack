@@ -51,6 +51,7 @@ define([
 			'</div>',
 
 			'</form>',
+			'<small class="actualizate" style="margin: 10px 5px 0 0;display:block;clear:both;"></small>',
 			'</div>',
 			'</div>',
 			'</div>',
@@ -58,7 +59,9 @@ define([
 
 			'<button type="button" class="btn  btn-facebook loggedout login"><i class="fa fa-facebook fa-navbar"></i> | Inicia Sesión con Facebook</button>',
 			'<button type="button" class="btn  btn-facebook loggedin logout" style="display:none;"><i class="fa fa-facebook fa-navbar"></i> | Cerrar Sesión</button>',
-			'<button type="button" class="btn  btn-craack loggedin updatedata" style="display:none;">Actualizar Datos</button>',
+			'<button type="button" class="btn  btn-craack loggedin updatedata" style="display:none;"><i class="glyphicon glyphicon-edit"></i>Actualizar Datos</button>',
+			'<button type="button" class="btn  btn-craack loggedin gotomyprofile" style="display:none;"><i class="glyphicon glyphicon-cog"></i> Ir a tu Perfil</button>',
+			'<button type="button" class="btn  btn-craack loggedin gotomycalendar" style="display:none;"><i class="glyphicon glyphicon-calendar"></i> Ir a tu Calendario</button>',
 			'</div>',
 			'</div>',
 			'</div>',

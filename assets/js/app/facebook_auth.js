@@ -71,7 +71,7 @@ require(['jquery', 'facebook'], function (jQuery, FB) {
 				if (container == '#loginuser') {
 					jQuery('.actualizate', container).html('Asegúrate de que la dirección de correo y el número de celular sean correctos, pues son el medio con que CRAACK te mantiene informado de las clases que has agendado');
 				} else {
-					console.log('container is', container);
+					jQuery('.actualizate', container).html('Asegúrate de que la dirección de correo y el número de celular sean correctos, pues son el medio con que tus alumnos te contactarán para sumarse a tus clases');
 				}
 				jQuery('.inputemail', container).val(mydata.email);
 				jQuery('.userid', container).val(mydata.id);
