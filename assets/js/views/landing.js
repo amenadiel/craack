@@ -12,7 +12,7 @@ define([
 
 		el: '#maincontainer',
 
-		backgrounds: ['homeclass1.jpg', 'homeclass2.jpg', 'homeclass3.jpg', 'homeclass4.jpg', 'homeclass5.jpg', 'homeclass6.jpg', 'homeclass7.jpg', 'homeclass8.jpg', 'homeclass9.jpg', 'homeclass10.jpg'],
+		backgrounds: ['1.jpg', '2.jpg', '3.jpg'], //, 'homeclass4.jpg', 'homeclass5.jpg', 'homeclass6.jpg', 'homeclass7.jpg', 'homeclass8.jpg', 'homeclass9.jpg', 'homeclass10.jpg'],
 
 
 		homelogo: [

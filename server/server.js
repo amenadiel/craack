@@ -17,18 +17,7 @@ app.use(loopback.compress());
 boot(app, __dirname);
 
 console.log('Defined models are', _.keys(app.models));
-var Deporte = app.models.Deporte;
-var Entrenador = app.models.Entrenador;
-var Clase = app.models.Clase;
-var Establecimiento = app.models.Establecimiento;
-var Comuna = app.models.Comuna;
 
-Clase.hasMany(Comuna, {
-	through: Establecimiento
-});
-Comuna.hasMany(Clase, {
-	through: Establecimiento
-});
 
 // -- Mount static files here--
 // All static middleware should be registered at the end, as all requests

@@ -47,11 +47,14 @@ define([
 			'<div class="form-group">',
 			'<div class="input-group">',
 			'<div class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></div>',
-			'<input type="celular" class="form-control inputcelular" id="loginuserInputCelular" placeholder="celular">',
+			'<input type="text" class="form-control inputcelular" id="loginuserInputCelular" placeholder="celular">',
+			'<input type="hidden" class="form-control userid" id="userid" placeholder="userid">',
 			'</div>',
 			'</div>',
 
 			'</form>',
+
+			'<small class="actualizate" style="margin: 10px 5px 0 0;display:block;clear:both;"></small>',
 			'</div>',
 			'</div>',
 			'</div>',

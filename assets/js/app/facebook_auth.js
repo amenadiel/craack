@@ -64,32 +64,40 @@ require(['jquery', 'facebook'], function (jQuery, FB) {
 	};
 
 
-	filldata = function (response, container) {
-		container = container || '.craack'
+	filldata = function (response, container, callback) {
+		container = container || '.craack';
 		if (response.status === 'connected') {
 			FB.api('/me', function (mydata) {
-				console.log(mydata);
-
+				if (container == '#loginuser') {
+					jQuery('.actualizate', container).html('Asegúrate de que la dirección de correo y el número de celular sean correctos, pues son el medio con que CRAACK te mantiene informado de las clases que has agendado');
+				} else {
+					console.log('container is', container);
+				}
 				jQuery('.inputemail', container).val(mydata.email);
+				jQuery('.userid', container).val(mydata.id);
 				jQuery('.inputname', container).val(mydata.first_name + ' ' + mydata.last_name);
 
+
+				FB.api("/me/picture", {
+						"redirect": false,
+						"height": "200",
+						"type": "normal",
+						"width": "200"
+					},
+					function (response) {
+						if (response && !response.error) {
+							console.log('picture', response);
+							var avatarurl = response.data.url.split('?')[0];
+							mydata.avatar = avatarurl;
+							if (callback) callback(mydata);
+							jQuery('.avatar').attr('src', response.data.url);
+						}
+					});
+
 			});
-			FB.api("/me/picture", {
-					"redirect": false,
-					"height": "200",
-					"type": "normal",
-					"width": "200"
-				},
-				function (response) {
-					if (response && !response.error) {
-						console.log('picture', response);
-						var avatarurl = response.data.url.split('?')[0];
-						jQuery('.avatar').attr('src', response.data.url);
-						//jQuery('#status').prepend('<img src="//graph.facebook.com/' + response.id + '/picture" style="float:left;margin-right:20px;width:40px;height:40px;margin-top:-7px;" class="img-circle" />');
-					}
-				});
 		} else {
 			jQuery('.avatar', '#loginuser').attr('src', '/assets/images/no-avatar-male.png');
+			if (callback) callback();
 		}
 	};
 
@@ -108,7 +116,35 @@ require(['jquery', 'facebook'], function (jQuery, FB) {
 			jQuery('#navbar .fb-login-button').appendTo('#status').show();
 		});
 	};
+
+
+
 	jQuery(document).ready(function () {
+
+		jQuery(document).on('click', '.updatedata', function () {
+			var container = '#' + jQuery(this).closest('.modal').attr('id');
+			if (container === '#loginuser' || container === '#signupuser') {
+				var userdata = {
+					id: jQuery('.userid', container).val(),
+					email: jQuery('.inputemail', container).val(),
+					name: jQuery('.inputname', container).val(),
+					celular: jQuery('.inputcelular', container).val()
+				};
+				jQuery.ajax({
+					url: '/api/Usuarios',
+					type: 'PUT',
+					dataType: 'json',
+					data: userdata
+
+				}).done(function (respuesta) {
+					console.log('Se han actualizado los datos ', respuesta);
+				});
+
+			} else {
+				console.log('Updating entrenador');
+			}
+		});
+
 		jQuery(document).on('click', '.logout', function () {
 			sessionStorage.setItem("connected", false);
 			jQuery('.loggedout').show();
@@ -116,23 +152,96 @@ require(['jquery', 'facebook'], function (jQuery, FB) {
 
 			jQuery('.avatar', '#loginuser').attr('src', '/assets/images/no-avatar-male.png');
 		});
-	});
-	jQuery(document).ready(function () {
+
+		jQuery(document).on('focus blur', '.inputcelular', function () {
+			var estenumero = jQuery(this).val();
+			var lematch = estenumero.match(/(.*)(\d{8})$/);
+			try {
+				console.log(lematch[2]);
+				if (estenumero.indexOf('+569 ') === -1) {
+					jQuery(this).val('+569 ' + lematch[2]);
+					jQuery(this).closest('.form-group').removeClass('has-error').addClass('has-success');
+				}
+
+
+			} catch (e) {
+				console.log(e);
+			}
+
+
+		});
+
+		jQuery(document).on('keyup', '.inputcelular', function () {
+			var estenumero = jQuery(this).val();
+			//console.log(jQuery(this).val(), jQuery(this).val().length);
+
+			if (estenumero.length == 13 || estenumero.length == 8) {
+				jQuery(this).closest('.form-group').removeClass('has-error').addClass('has-success');
+			} else {
+				jQuery(this).closest('.form-group').removeClass('has-success').addClass('has-error');
+			}
+		});
+
 		jQuery(document).on('click', '.login', function () {
-			var container = jQuery(this).closest('.modal').attr('id');
+
+			var container = '#' + jQuery(this).closest('.modal').attr('id');
 			FB.login(function (response) {
 				if (response.status == 'connected') sessionStorage.setItem("connected", true);
 				console.log('Login responde', response);
 				_.delay(function () {
 					enciendeapaga(response);
-					filldata(response);
+					filldata(response, container, function (mydata) {
+						console.log('MyData es', mydata);
+						if (container === '#loginuser' || container === '#signupuser') {
+							jQuery.ajax({
+								url: '/api/Usuarios/' + mydata.id + '/exists'
+							}).done(function (response) {
+								if (response.exists === true) {
+									jQuery.ajax({
+										url: '/api/Usuarios/' + mydata.id,
+										dataType: 'json'
+									}).done(function (userdata) {
+										console.log('El usuario ya registrado es ', userdata);
+										jQuery('.inputname', container).val(userdata.name).closest('.form-group').addClass('has-success');
+										jQuery('.inputemail', container).val(userdata.email).closest('.form-group').addClass('has-success');
+										jQuery('.inputcelular', container).val(userdata.celular);
+										if (jQuery('.inputcelular', container).val().length < 9) {
+											jQuery('.inputcelular', container).closest('.form-group').addClass('has-error');
+										} else {
+											jQuery('.inputcelular', container).closest('.form-group').addClass('has-success');
+										}
+									});
+								}
+							}).fail(function (jqXHR, textStatus, errorThrown) {
+								var respuesta = JSON.parse(jqXHR.responseText);
+								console.log('ERROR', respuesta);
+								if (respuesta.error.message.indexOf("Unknown") !== -1) {
+									mydata.isReal = 1;
+									jQuery.ajax({
+										url: '/api/Usuarios',
+										type: 'POST',
+										dataType: 'json',
+										data: mydata
+										//,contentType: 'application/json'
+									}).done(function (respuesta) {
+										console.log('El usuario recién registrado es ', respuesta);
+										jQuery('.inputname', container).closest('.form-group').addClass('has-success');
+										jQuery('.inputemail', container).closest('.form-group').addClass('has-success');
+										jQuery('.inputcelular', container).closest('.form-group').addClass('has-error');
+									});
+								}
+							});
+						}
+
+					});
 				}, 500);
 
 			}, {
 				scope: 'user_friends'
 			});
-
-			//jQuery('.loggedout').show();
+			//jQuery('.loggedout').show(); 
+			//http://www.craack.com/api/Usuarios/10153125242673943/exists
+			//http://www.craack.com/api/Usuarios/10153125242673943/exists
 			//jQuery('.loggedin').hide();
 		});
 	});
