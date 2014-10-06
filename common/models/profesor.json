@@ -1,6 +1,5 @@
 {
 	"name": "Profesor",
-	"plural": "Profesores",
 	"options": {
 		"idInjection": false,
 		"mysql": {
@@ -13,15 +12,16 @@
 				"type": "belongsTo",
 				"foreignKey": "idEspecialidad"
 			},
-			"clase": {
-				"model": "Clase",
-				"type": "hasMany",
-				"foreignKey": "idProfesor"
-			},
 			"usuario": {
 				"model": "Usuario",
 				"type": "belongsTo",
 				"foreignKey": "idUsuario"
+			},
+
+			"clase": {
+				"model": "Clase",
+				"type": "hasMany",
+				"foreignKey": "idProfesor"
 			}
 		}
 	},
@@ -42,29 +42,29 @@
 				"nullable": "NO"
 			}
 		},
-		"nombre": {
-			"type": "String",
-			"required": false,
-			"length": 765,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "nombre",
-				"dataType": "varchar",
-				"dataLength": 765,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "NO"
-			}
-		},
-		"mail": {
+		"name": {
 			"type": "String",
 			"required": false,
 			"length": 192,
 			"precision": null,
 			"scale": null,
 			"mysql": {
-				"columnName": "mail",
+				"columnName": "name",
+				"dataType": "varchar",
+				"dataLength": 192,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "NO"
+			}
+		},
+		"email": {
+			"type": "String",
+			"required": false,
+			"length": 192,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "email",
 				"dataType": "varchar",
 				"dataLength": 192,
 				"dataPrecision": null,
@@ -99,7 +99,7 @@
 				"dataLength": 765,
 				"dataPrecision": null,
 				"dataScale": null,
-				"nullable": "NO"
+				"nullable": "YES"
 			}
 		},
 		"fechaInscrito": {
@@ -147,21 +147,6 @@
 				"nullable": "YES"
 			}
 		},
-		"fono": {
-			"type": "String",
-			"required": false,
-			"length": 36,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "fono",
-				"dataType": "varchar",
-				"dataLength": 36,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "NO"
-			}
-		},
 		"idEspecialidad": {
 			"type": "Number",
 			"required": false,
@@ -181,13 +166,28 @@
 			"type": "Number",
 			"required": false,
 			"length": null,
-			"precision": 10,
+			"precision": 19,
 			"scale": 0,
 			"mysql": {
 				"columnName": "id_usuario",
-				"dataType": "int",
+				"dataType": "bigint",
 				"dataLength": null,
-				"dataPrecision": 10,
+				"dataPrecision": 19,
+				"dataScale": 0,
+				"nullable": "NO"
+			}
+		},
+		"isReal": {
+			"type": "Number",
+			"required": false,
+			"length": null,
+			"precision": 3,
+			"scale": 0,
+			"mysql": {
+				"columnName": "is_real",
+				"dataType": "tinyint",
+				"dataLength": null,
+				"dataPrecision": 3,
 				"dataScale": 0,
 				"nullable": "NO"
 			}

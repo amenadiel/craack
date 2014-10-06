@@ -12,6 +12,12 @@
 				"type": "hasMany",
 				"foreignKey": "idComuna"
 			}
+		},
+
+		"clase": {
+			"model": "Clase",
+			"type": "hasMany",
+			"foreignKey": "idComuna"
 		}
 	},
 	"properties": {

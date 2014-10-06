@@ -333,10 +333,18 @@ border-bottom: 2px solid black;
   font-size: 1.3em;
 }
 
-.homescreen  .selectdeporte .btn-craack,
+.homescreen  .selectespecialidad .btn-craack,
 .homescreen  .selectcomuna .btn-craack {
 padding: 6px 20px 7px;
 font-size: 1em;
+}
+
+.craack .thumbnail img {
+  width:100% !important;
+}
+
+.craack .selectespecialidad, .craack .selectcomuna {
+  padding:20px 0;
 }
 
 .blue_landing {

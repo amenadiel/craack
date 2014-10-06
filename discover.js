@@ -26,14 +26,14 @@ console.log('Will use datasource', 'craackmysql');
 
 });*/
 
-ds.discoverSchema('usuario', {
+ds.discoverSchema('profesor', {
 	owner: 'craack',
 	visited: {},
 	associations: true
 }, function (err, models) {
-	if (models.Entrenador) {
-		console.log('found model establecimiento');
-		models.Entrenador.setup();
+	if (models.Profesor) {
+		console.log('found model profesor');
+		models.Profesor.setup();
 	} else {
 		console.log('models were', JSON.stringify(models));
 	}

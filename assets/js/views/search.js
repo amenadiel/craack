@@ -19,39 +19,42 @@ define([
 			'</h2>',
 			'<!-- Nav tabs -->',
 			'<ul class="nav nav-tabs" role="tablist">',
-			'<li class="active"><a href="#home" role="tab" data-toggle="tab">Buscar por deporte</a></li>',
-			'<li><a href="#profile" role="tab" data-toggle="tab">Buscar por comuna</a></li>',
-			'<li><a href="#messages" role="tab" data-toggle="tab">Buscar por amigos</a></li>',
+			'<li class="active"><a href="#especialidad" role="tab" data-toggle="tab">Buscar por especialidad</a></li>',
+			'<li><a href="#comuna" role="tab" data-toggle="tab">Buscar por comuna</a></li>',
+			'<li><a href="#amigos" role="tab" data-toggle="tab">Buscar por amigos</a></li>',
 			'</ul>',
 
 			'<!-- Tab panes -->',
 			'<div style="padding:0 20px; " class="tab-content">',
-			'<div class="tab-pane active" id="home">Buscar por deporte<br><br>',
+			'<div class="tab-pane active" id="especialidad">Buscar por especialidad<br><br>',
 
-			'<div class="row selectdeporte">',
+			'<div class="row selectespecialidad">',
 			'<div class="col-sm-8 col-xs-8" style="text-align:right;padding-top:5px;">',
-			'<select multiple id="deportes" style="width:453px;" class="invisible" ></select>',
+			'<select multiple id="especialidades" style="width:453px;" class="invisible" ></select>',
 			'</div>',
 			'<div class="col-sm-4 col-xs-4" style="text-align:center;">',
-			'<button class="btn btn-craack" id="buscardeporte">Buscar</button>',
+			'<button class="btn btn-craack" id="buscarespecialidad">Buscar</button>',
 			'</div>',
 			'</div>',
+			'<div class="row results" ></div>',
 			'</div>',
 
 
-			'<div class="tab-pane" id="profile">Buscar por comuna<br><br>',
+			'<div class="tab-pane" id="comuna">Buscar por comuna<br><br>',
 			'<div class="row selectcomuna">',
-			'<div class="col-sm-8 col-xs-8">',
+			'<div class="col-sm-8 col-xs-8" style="text-align:right;">',
 			'<select multiple id="comunas" style="width:453px;margin-top:5px;" class="invisible" ></select>',
 			'</div>',
 			'<div class="col-sm-4 col-xs-4" style="text-align:center;">',
 			'<button class="btn btn-craack" id="buscarcomuna">Buscar</button>',
 			'</div>',
 			'</div>',
+
+			'<div class="row results" ></div>',
 			'</div>',
 
 
-			'<div class="tab-pane" id="messages">Buscar por amigos<br>',
+			'<div class="tab-pane" id="amigos">Buscar por amigos<br>',
 
 			'<div class="row selectcomuna">',
 			'<div class="col-sm-8 col-xs-8">',
@@ -63,14 +66,12 @@ define([
 			//'<button class="btn btn-craack" id="buscarcomuna">Buscar</button>',
 			'</div>',
 			'</div>',
-
-
 			'</div>',
+
 			'</div>',
 			'<br>',
-			'<div id="results" style="padding:20px;">',
-
-			'<div>',
+			'<div id="results" style="padding:20px;"><div>',
+			'<div style="height:5vw;">&nbsp;</div>',
 			'<div style="height:5vw;">&nbsp;</div>',
 			'</div>'
 		].join(''),
@@ -92,10 +93,10 @@ define([
 				dataType: 'json'
 			}).done(function (data) {
 				data.forEach(function (element) {
-					jQuery('#deportes').append('<option id="' + element.id + '">' + element.nombre + '</option>');
+					jQuery('#especialidades').append('<option id="' + element.id + '">' + element.nombre + '</option>');
 				});
 
-				$("#deportes").removeClass('invisible').select2({
+				$("#especialidades").removeClass('invisible').select2({
 					minimumInputLength: 3,
 				});
 

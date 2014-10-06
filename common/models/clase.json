@@ -12,20 +12,20 @@
 				"type": "belongsTo",
 				"foreignKey": "idEstablecimiento"
 			},
-			"entrenador": {
-				"model": "Profesor",
-				"type": "belongsTo",
-				"foreignKey": "idProfesor"
-			},
-			"deporte": {
-				"model": "Especialidad",
-				"type": "belongsTo",
-				"foreignKey": "idEspecialidad"
-			},
 			"comuna": {
 				"model": "Comuna",
 				"type": "belongsTo",
 				"foreignKey": "idComuna"
+			},
+			"especialidad": {
+				"model": "Especialidad",
+				"type": "belongsTo",
+				"foreignKey": "idEspecialidad"
+			},
+			"profesor": {
+				"model": "Profesor",
+				"type": "belongsTo",
+				"foreignKey": "idProfesor"
 			}
 		}
 	},
@@ -103,13 +103,23 @@
 				"dataLength": null,
 				"dataPrecision": 10,
 				"dataScale": 0,
-				"nullable": "NO"
+				"nullable": "YES"
 			}
 		},
 		"nombre": {
 			"type": "String",
-			"required": false
-
+			"required": false,
+			"length": 192,
+			"precision": null,
+			"scale": null,
+			"mysql": {
+				"columnName": "nombre",
+				"dataType": "varchar",
+				"dataLength": 192,
+				"dataPrecision": null,
+				"dataScale": null,
+				"nullable": "YES"
+			}
 		},
 		"lugar": {
 			"type": "String",
@@ -123,7 +133,7 @@
 				"dataLength": 765,
 				"dataPrecision": null,
 				"dataScale": null,
-				"nullable": "NO"
+				"nullable": "YES"
 			}
 		},
 		"idComuna": {
@@ -138,7 +148,7 @@
 				"dataLength": null,
 				"dataPrecision": 10,
 				"dataScale": 0,
-				"nullable": "NO"
+				"nullable": "YES"
 			}
 		},
 		"location": {
@@ -153,7 +163,7 @@
 				"dataLength": null,
 				"dataPrecision": null,
 				"dataScale": null,
-				"nullable": "NO"
+				"nullable": "YES"
 			}
 		}
 	}

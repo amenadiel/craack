@@ -20,7 +20,7 @@ define([
 			'<!-- Nav tabs -->',
 			'<p style="padding:0 20px;text-align:justify">',
 			'CRAACK es una plataforma online que ayuda a personas como tú',
-			' a encontrar su entrenador perfecto en cualquier área del deporte y bienestar.',
+			' a encontrar su profesor perfecto en cualquier disciplina.',
 			'</p>',
 			'<p style="padding:0 20px;text-align:justify">',
 			'Ahora podrás mejorar en aquella disciplina en que siempre quisiste ser bueno, ',

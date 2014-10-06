@@ -134,6 +134,8 @@ require(['jquery',
 	var appRouter = new AppRouter();
 
 
+
+
 	jQuery(document).ready(function () {
 
 
@@ -154,15 +156,6 @@ require(['jquery',
 			});
 		});
 
-		/*jQuery(document).on('click', '.open_signupuser', function () {
-			jQuery('.navmenu').offcanvas('hide');
-			require(['views/signupuser'], function (SignupUserView) {
-				var signupuserModal = new SignupUserView(function () {
-					jQuery('#signupuser').modal('show');
-				});
-			});
-		});*/
-
 		jQuery(document).on('click', '.open_signuptrainer, .open_logintrainer', function () {
 			jQuery('.navmenu').offcanvas('hide');
 			console.log('logintrainer');
@@ -174,54 +167,82 @@ require(['jquery',
 			});
 		});
 
-		/*jQuery(document).on('click', '.open_logintrainer', function () {
-			console.log('open_logintrainer');
-			jQuery('.navmenu').offcanvas('hide');
-			require(['views/logintrainer'], function (LoginTrainerView) {
-				console.log('LoginTrainerView', LoginTrainerView);
-				var logintrainerModal = new LoginTrainerView(function () {
-					jQuery('#logintrainer').modal('show');
-				});
-			});
-		});*/
 
 
 
-
-		jQuery(document).on('click', '#buscardeporte', function () {
+		jQuery(document).on('click', '#buscarespecialidad', function () {
 			var selectedoptions = [];
-			if (jQuery('#deportes option:selected').length === 0) {
-				alert('Elija al menos un deporte');
-			} else if (jQuery('#deportes option:selected').length === 1) {
-				jQuery('#deportes option:selected').each(function () {
-					var sportid = 'filter[where][idDeporte]=' + jQuery(this).attr('id');
+			if (jQuery('#especialidades option:selected').length === 0) {
+				alert('Elija al menos un especialidad');
+			} else if (jQuery('#especialidades option:selected').length === 1) {
+				jQuery('#especialidades option:selected').each(function () {
+					var sportid = 'filter[where][idEspecialidad]=' + jQuery(this).attr('id');
 					selectedoptions.push(sportid);
 				});
 			} else {
-				jQuery('#deportes option:selected').each(function () {
-					var sportid = 'filter[where][idDeporte][inq]=' + jQuery(this).attr('id');
+				jQuery('#especialidades option:selected').each(function () {
+					var sportid = 'filter[where][idEspecialidad][inq]=' + jQuery(this).attr('id');
 					selectedoptions.push(sportid);
 				});
 			}
 
-
 			jQuery.ajax({
-				url: '/api/Clases?filter[include]=comuna&filter[include]=deporte&filter[include]=entrenador&' + selectedoptions.join('&'),
+				url: '/api/Clases?filter[include]=comuna&filter[include]=especialidad&filter[include]=profesor&' + selectedoptions.join('&'),
 				type: 'GET',
 				dataType: 'json'
 			}).done(function (results) {
-				jQuery('#results').html('');
+				jQuery('#especialidad .results').html('');
 				results.forEach(function (clase) {
-					console.log(clase);
-					var lafecha = clase.fecha.split(/T\./ig);
-
-					var mediaItem = jQuery('<div class="media"></div>');
-					mediaItem.append('<a class="pull-left " href="#"><img src="' + clase.entrenador.avatar + '" class="img-circle"></a>');
-					mediaItem.append('<div class="media-body"><small>' + lafecha[0] + ' ' + lafecha[1] + 'hrs</small><h4 class="media-heading"><a href="#">' + clase.deporte.nombre + '</a> / ' + clase.nombre + '</h4><b>' + clase.entrenador.nombre + '</b><br> ' + clase.establecimiento.direccion + ' </div>');
-					mediaItem.appendTo('#results');
+					parseClass(clase, '#especialidad .results');
 				});
 			});
 		});
+
+
+		jQuery(document).on('click', '#buscarcomuna', function () {
+			var selectedoptions = [];
+			if (jQuery('#comunas option:selected').length === 0) {
+				alert('Elija al menos una comuna');
+			} else if (jQuery('#comunas option:selected').length === 1) {
+				jQuery('#comunas option:selected').each(function () {
+					var comunaid = 'filter[where][idComuna]=' + jQuery(this).attr('id');
+					selectedoptions.push(comunaid);
+				});
+			} else {
+				jQuery('#especialidades option:selected').each(function () {
+					var comunaid = 'filter[where][idComuna][inq]=' + jQuery(this).attr('id');
+					selectedoptions.push(comunaid);
+				});
+			}
+
+			jQuery.ajax({
+				url: '/api/Clases?filter[include]=comuna&filter[include]=especialidad&filter[include]=profesor&' + selectedoptions.join('&'),
+				type: 'GET',
+				dataType: 'json'
+			}).done(function (results) {
+				jQuery('#comuna .results').html('');
+				results.forEach(function (clase) {
+					parseClass(clase, '#comuna .results');
+				});
+			});
+		});
+
+
+		var parseClass = function (clase, container) {
+			console.log(clase, container);
+			var lafechaR = clase.fecha.split("T");
+			var lafecha = lafechaR[0];
+			var lahora = lafechaR[1].split('.')[0];
+
+			var mediaItem = jQuery('<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2"> </div>');
+			var thumbnail = jQuery('<div class="thumbnail"></div>');
+			thumbnail.append('<img src="' + clase.profesor.avatar + '" height="200" alt="...">');
+			thumbnail.append('<div class="caption"><h3>' + clase.especialidad.nombre + '</h3><p>' + clase.nombre + '</p><p>' + clase.profesor.name + '</p><p>' + clase.lugar + ', ' + clase.comuna.nombre + '</p></div>');
+			thumbnail.appendTo(mediaItem);
+			//mediaItem.append('<a class="pull-left " href="#"><img src="' + clase.profesor.avatar + '" class="img-circle"></a>');
+			//mediaItem.append('<div class="media-body"><small>' + lafecha + ' a las ' + lahora + 'hrs</small><h4 class="media-heading"><a href="#">' + clase.especialidad.nombre + '</a> / ' + clase.nombre + '</h4><b>' + clase.profesor.name + '</b><br> ' + clase.lugar + ' </div>');
+			mediaItem.appendTo(container);
+		};
 
 		console.log('Starting the craack');
 		Backbone.history.start({
