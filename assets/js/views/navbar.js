@@ -20,12 +20,13 @@ define([
 			'<div class="navbar-brand navbar-brand-center" yield-to="title">',
 			'<span>CR<b>AA</b>CK</span>',
 			'</div>',
-			'<div style="padding:10px;min-width:200px;" id="status"  class="btn-group pull-right" yield-to="navbarAction">',
+			'<div style="padding:10px;min-width:250px;width: 16%;" id="status"  class="btn-group pull-right" yield-to="navbarAction">',
 			'<button class="btn btn-navbar btn-transparent open_loginuser loggedout" >INICIA SESIÓN</button>',
 			'<button class="btn btn-navbar btn-transparent btn-border open_signupuser loggedout" >INSCRÍBETE</button>',
 			'<button class="btn btn-navbar btn-transparent logout loggedin" style="display:none;" >CIERRA SESIÓN</button>',
 			'<a href="/#/perfil" class="btn btn-navbar btn-transparent btn-border perfil loggedin" style="display:none;" >PERFIL</a>',
-			'</div>',
+			'</div>'
+
 		].join(''),
 
 		initialize: function () {

@@ -39,6 +39,8 @@ define([
 
 
 		firstblock: ['<div style="margin:2%;">',
+			'<p>Estamos en etapa de beta con invitación, muchas funcionalidades no están implementadas todavía.</p>',
+			'<p>Desde ya puedes inscribirte en CRAACK para ser de los primeros en conocer nuestro servicio.</p>',
 			'<h2>¡CONVIERTE EN UN CR<b>AA</b>CK, HOY!<br/>',
 			//'<small>Un CRAACK es aquella persona con cualidades excepcionales en un campo determinado</small>',
 			'</h2>',

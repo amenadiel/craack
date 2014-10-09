@@ -8,24 +8,6 @@ var app = require('./server/server');
 var ds = app.dataSources.craackmysql;
 console.log('Will use datasource', 'craackmysql');
 
-
-/*ds.discoverModelDefinitions({
-	views: true,
-	limit: 20
-}, function (err, models) {
-	console.log(models);
-});*/
-
-/*ds.discoverSchema('entrenador', {
-	owner: 'craack'
-}, function (err, models) {
-	if (models.Entrenador) {
-		console.log('found model Entrenador');
-		models.Entrenador.setup();
-	}
-
-});*/
-
 ds.discoverSchema('profesor', {
 	owner: 'craack',
 	visited: {},
@@ -46,6 +28,24 @@ ds.discoverSchema('profesor', {
 		ds.disconnect();
 	});*/
 });
+/*ds.discoverModelDefinitions({
+	views: true,
+	limit: 20
+}, function (err, models) {
+	console.log(models);
+});*/
+
+/*ds.discoverSchema('entrenador', {
+	owner: 'craack'
+}, function (err, models) {
+	if (models.Entrenador) {
+		console.log('found model Entrenador');
+		models.Entrenador.setup();
+	}
+
+});*/
+
+
 
 /*dataSource.discoverAndBuildModels('entrenador', {
 	owner: 'craack',

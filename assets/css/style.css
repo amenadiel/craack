@@ -24,6 +24,16 @@ body.craack {
   /*max-width: 1200px;*/
 }
 
+.craack .betaribbon {
+  position:absolute;
+  right:0;
+  top:0;
+  width:75px;
+  height: 78px;
+  background:url('/assets/images/beta_ribbon.png') right top no-repeat;
+  z-index:10000;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family:"Open Sans" !important;
   color:#404041;
