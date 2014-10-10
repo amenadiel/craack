@@ -95,6 +95,8 @@ body.craack {
   border: 1px solid white;
  }
 
+
+
 .secondblock {
   text-align:justify;
 }
@@ -217,10 +219,27 @@ margin-left: -20%;
   font-weight:700;
   text-align:right;
   font-size:4em;
-  padding-top: 26vw;
-  padding-right: 1vw;
+  /*padding-top: 26vw;
+  padding-right: 1vw;*/
   text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
+.homescreen #imgs div span {
+font-size:50%;
+position: relative;
+display: block;
+top: 25vw;
+
+right:3px;
+}
+
+.craack .c1 {
+  max-width:29.5vw;
+ }
+/*
+.craack .c2 {
+  max-width: 62vw;
+ }
+*/
 
 .homescreen #imgs .v1-11 {
   background-image: url(/assets/images/craack.com_v1-11.jpg);
@@ -433,7 +452,7 @@ position: relative;
   padding: 10px;
   background-image:  url(/assets/images/craack_com_v1-21.png);
   background-repeat: no-repeat;
-  padding-left: 6vw;
+  padding-left: 7vw;
   background-position: -0.5% top;
 
 }
@@ -494,6 +513,7 @@ margin-bottom: 0;
   margin: 2%;
   width: 40px;
   font-size: 160%;
+  max-width: 6.5vw;
 }
 
 .craack .footer-left a i {
