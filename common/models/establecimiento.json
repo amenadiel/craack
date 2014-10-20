@@ -1,86 +1,89 @@
 {
-	"name": "Establecimiento",
-	"options": {
-		"idInjection": false,
-		"mysql": {
-			"schema": "craack",
-			"table": "establecimiento"
-		},
-		"relations": {
-
-			"comuna": {
-				"model": "Comuna",
-				"type": "belongsTo",
-				"foreignKey": "idComuna"
-			},
-			"clase": {
-				"model": "Clase",
-				"type": "hasMany",
-				"foreignKey": "idEstablecimiento"
-			}
-		}
-	},
-	"properties": {
-		"id": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"id": 1,
-			"mysql": {
-				"columnName": "id",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "NO"
-			}
-		},
-		"direccion": {
-			"type": "String",
-			"required": false,
-			"length": 765,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "direccion",
-				"dataType": "varchar",
-				"dataLength": 765,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "NO"
-			}
-		},
-		"idComuna": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"mysql": {
-				"columnName": "id_comuna",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "NO"
-			}
-		},
-		"location": {
-			"type": "GeoPoint",
-			"required": false,
-			"length": null,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "location",
-				"dataType": "point",
-				"dataLength": null,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "NO"
-			}
-		}
-	}
+  "name": "Establecimiento",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "craack",
+      "table": "establecimiento"
+    },
+    "relations": {
+      "comuna": {
+        "model": "Comuna",
+        "type": "belongsTo",
+        "foreignKey": "idComuna"
+      },
+      "clase": {
+        "model": "Clase",
+        "type": "hasMany",
+        "foreignKey": "idEstablecimiento"
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "direccion": {
+      "type": "String",
+      "required": false,
+      "length": 765,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "direccion",
+        "dataType": "varchar",
+        "dataLength": 765,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "idComuna": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_comuna",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "location": {
+      "type": "GeoPoint",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "location",
+        "dataType": "point",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
 }

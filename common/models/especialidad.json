@@ -18,11 +18,11 @@
 	"properties": {
 		"id": {
 			"type": "Number",
+			"id": 1,
 			"required": false,
 			"length": null,
 			"precision": 10,
 			"scale": 0,
-			"id": 1,
 			"mysql": {
 				"columnName": "id",
 				"dataType": "int",
@@ -84,7 +84,7 @@
 			"precision": null,
 			"scale": null,
 			"mysql": {
-				"columnName": "descripcion",
+				"columnName": "categoria",
 				"dataType": "text",
 				"dataLength": 65535,
 				"dataPrecision": null,
@@ -92,5 +92,9 @@
 				"nullable": "NO"
 			}
 		}
-	}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [],
+	"methods": []
 }

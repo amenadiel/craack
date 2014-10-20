@@ -1,170 +1,174 @@
 {
-	"name": "Clase",
-	"options": {
-		"idInjection": false,
-		"mysql": {
-			"schema": "craack",
-			"table": "clase"
-		},
-		"relations": {
-			"establecimiento": {
-				"model": "Establecimiento",
-				"type": "belongsTo",
-				"foreignKey": "idEstablecimiento"
-			},
-			"comuna": {
-				"model": "Comuna",
-				"type": "belongsTo",
-				"foreignKey": "idComuna"
-			},
-			"especialidad": {
-				"model": "Especialidad",
-				"type": "belongsTo",
-				"foreignKey": "idEspecialidad"
-			},
-			"profesor": {
-				"model": "Profesor",
-				"type": "belongsTo",
-				"foreignKey": "idProfesor"
-			}
-		}
-	},
-	"properties": {
-		"id": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"id": 1,
-			"mysql": {
-				"columnName": "id",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "NO"
-			}
-		},
-		"fecha": {
-			"type": "Date",
-			"required": false,
-			"length": null,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "fecha",
-				"dataType": "datetime",
-				"dataLength": null,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "NO"
-			}
-		},
-		"idProfesor": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"mysql": {
-				"columnName": "id_profesor",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "NO"
-			}
-		},
-		"idEspecialidad": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"mysql": {
-				"columnName": "id_especialidad",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "NO"
-			}
-		},
-		"idEstablecimiento": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"mysql": {
-				"columnName": "id_establecimiento",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "YES"
-			}
-		},
-		"nombre": {
-			"type": "String",
-			"required": false,
-			"length": 192,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "nombre",
-				"dataType": "varchar",
-				"dataLength": 192,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "YES"
-			}
-		},
-		"lugar": {
-			"type": "String",
-			"required": false,
-			"length": 765,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "lugar",
-				"dataType": "varchar",
-				"dataLength": 765,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "YES"
-			}
-		},
-		"idComuna": {
-			"type": "Number",
-			"required": false,
-			"length": null,
-			"precision": 10,
-			"scale": 0,
-			"mysql": {
-				"columnName": "id_comuna",
-				"dataType": "int",
-				"dataLength": null,
-				"dataPrecision": 10,
-				"dataScale": 0,
-				"nullable": "YES"
-			}
-		},
-		"location": {
-			"type": "GeoPoint",
-			"required": false,
-			"length": null,
-			"precision": null,
-			"scale": null,
-			"mysql": {
-				"columnName": "location",
-				"dataType": "point",
-				"dataLength": null,
-				"dataPrecision": null,
-				"dataScale": null,
-				"nullable": "YES"
-			}
-		}
-	}
+  "name": "Clase",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "craack",
+      "table": "clase"
+    },
+    "relations": {
+      "establecimiento": {
+        "model": "Establecimiento",
+        "type": "belongsTo",
+        "foreignKey": "idEstablecimiento"
+      },
+      "comuna": {
+        "model": "Comuna",
+        "type": "belongsTo",
+        "foreignKey": "idComuna"
+      },
+      "especialidad": {
+        "model": "Especialidad",
+        "type": "belongsTo",
+        "foreignKey": "idEspecialidad"
+      },
+      "profesor": {
+        "model": "Profesor",
+        "type": "belongsTo",
+        "foreignKey": "idProfesor"
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "fecha": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "fecha",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "idProfesor": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_profesor",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "idEspecialidad": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_especialidad",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "idEstablecimiento": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_establecimiento",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "nombre": {
+      "type": "String",
+      "required": false,
+      "length": 192,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "nombre",
+        "dataType": "varchar",
+        "dataLength": 192,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "lugar": {
+      "type": "String",
+      "required": false,
+      "length": 765,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "lugar",
+        "dataType": "varchar",
+        "dataLength": 765,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "idComuna": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_comuna",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "location": {
+      "type": "GeoPoint",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "location",
+        "dataType": "point",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
 }

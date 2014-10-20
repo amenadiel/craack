@@ -1,58 +1,59 @@
 {
-	"_meta": {
-		"sources": [
-			"../common/models",
-			"./models"
-		]
-	},
-	"User": {
-		"dataSource": "db"
-	},
-	"AccessToken": {
-		"dataSource": "db",
-		"public": false
-	},
-	"ACL": {
-		"dataSource": "db",
-		"public": false
-	},
-	"RoleMapping": {
-		"dataSource": "db",
-		"public": false
-	},
-	"Role": {
-		"dataSource": "db",
-		"public": false
-	},
-	"Person": {
-		"dataSource": "db",
-		"public": true
-	},
-
-	"Clase": {
-		"dataSource": "craackmysql",
-		"public": true
-	},
-	"Comuna": {
-		"dataSource": "craackmysql",
-		"public": true
-	},
-	"Especialidad": {
-		"dataSource": "craackmysql",
-		"public": true
-	},
-	"Profesor": {
-		"dataSource": "craackmysql",
-		"public": true
-	},
-	"Usuario": {
-		"dataSource": "craackmysql",
-		"public": true
-	},
-	"Establecimiento": {
-		"dataSource": "craackmysql",
-		"public": true
-	}
-
-
+  "_meta": {
+    "sources": [
+      "../common/models",
+      "./models"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Person": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Clase": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Comuna": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Especialidad": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Profesor": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Usuario": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "Establecimiento": {
+    "dataSource": "craackmysql",
+    "public": true
+  },
+  "leader": {
+    "dataSource": "craackmysql",
+    "public": true
+  }
 }

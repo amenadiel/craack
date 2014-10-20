@@ -8,7 +8,16 @@ var app = require('./server/server');
 var ds = app.dataSources.craackmysql;
 console.log('Will use datasource', 'craackmysql');
 
-ds.discoverSchema('profesor', {
+var leader = app.models.leader;
+
+ds.automigrate(function () {
+	ds.discoverModelProperties('leader', function (err, props) {
+		console.log(props);
+	});
+});
+
+
+/*ds.discoverSchema('profesor', {
 	owner: 'craack',
 	visited: {},
 	associations: true
@@ -19,15 +28,15 @@ ds.discoverSchema('profesor', {
 	} else {
 		console.log('models were', JSON.stringify(models));
 	}
-	/*models.Entrenador.find(function (err, act) {
+	models.Entrenador.find(function (err, act) {
 		if (err) {
 			console.errclearor(err);
 		} else {
 			console.log(act);
 		}
 		ds.disconnect();
-	});*/
-});
+	});
+});*/
 /*ds.discoverModelDefinitions({
 	views: true,
 	limit: 20

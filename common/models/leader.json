@@ -1,0 +1,24 @@
+{
+	"name": "leader",
+	"base": "PersistedModel",
+	"properties": {
+		"id": {
+			"type": "number",
+			"id": "true",
+			"index": true
+		},
+		"name": {
+			"type": "string",
+			"index": {
+				"unique": true
+			}
+		},
+		"age": {
+			"type": "number"
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [],
+	"methods": []
+}
