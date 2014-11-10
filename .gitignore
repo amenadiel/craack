@@ -103,3 +103,4 @@ site/tmp
 
 site/crash.log
 site/Gemfile.lock
+server/datasources.json
